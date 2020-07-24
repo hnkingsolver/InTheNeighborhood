@@ -7,6 +7,8 @@
 nav{
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    padding:5px 2%;
     background-color: black;
     color: white;
     text-decoration: none;    
