@@ -1,5 +1,6 @@
-from django.shortcuts import render, HttpResponse, redirect
+from django.shortcuts import render, HttpResponse, redirect, render
 
 # Create your views here.
+from django.shortcuts import render	# notice the import!
 def index(request):
-    return HttpResponse("this is the equivalent of @app.route('/')!")
+    return render(request, "index.html")
