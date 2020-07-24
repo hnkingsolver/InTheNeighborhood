@@ -3,20 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <title>Document</title>
 </head>
 <body>
     <nav>
         <h1>Logo</h1>
-        <ul>
-            <li>About</li>
-            <li>Resources</li>
-            <li>Contact Us</li>
-        </ul>
+        <div class="nav links">
+            <ul>
+                <li>About</li>
+                <li>Resources</li>
+                <li class="contact">Contact Us</li>
+            </ul>
+        </div>
     </nav>
-    
-    <h1>In the neighborhood</h1>
 
+    <main>
+        <h1>We're in the neighborhood</h1>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur molestias voluptas, in praesentium neque asperiores. Necessitatibus eius culpa ullam tenetur impedit, animi voluptate ab, quod reiciendis eum dolores quidem ex.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti debitis beatae, officia iusto ipsam quae laudantium dolore ut dolores quaerat ipsa qui libero. Beatae earum maxime esse, sequi asperiores quisquam?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque sequi a debitis error, obcaecati, quibusdam dicta culpa laudantium quisquam eius labore qui illo nulla sint ab similique delectus repellat accusamus!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum veniam soluta aperiam aliquam nisi possimus amet, dignissimos sit laborum quo at odit vel nam quis ratione quibusdam, labore corrupti totam.</p>
+    </main>
+    
     
 </body>
 </html>
