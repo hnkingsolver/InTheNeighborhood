@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     {% load static %}
-    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css" />
+    <link rel="stylesheet" href="{% static 'css/about.css' %}" />
+
     <title>About</title>
 </head>
+
 <body>
-<!-- nav -->
+    <!-- nav -->
     <nav>
-        <h1>Logo</h1>
+        <img class="nav_logo" src="static/img/Logo_No_Text.png" alt="logo" style="width: 6%; padding: .5rem;"/>
         <div class="nav links">
             <ul>
                 <li>About</li>
@@ -21,5 +25,23 @@
         </div>
     </nav>
 
+    <article class="cf">
+        <div class="fl w-50 bg-near-white tc">
+            <img class="fist_img" src="static/img/fistblm.jpeg" alt="">
+        </div>
+        <div class="fl w-50 bg-light-gray tc">
+            <main class="pa3 pa5-ns">
+                <p class="f6 lh-copy measure-narrow">
+                    Typography has one plain duty before it and that is to convey information
+                    in writing. No argument or consideration can absolve typography from this
+                    duty. A printed work which cannot be read becomes a product without
+                    purpose.
+                </p>
+            </main>
+
+
+        </div>
+    </article>
 </body>
+
 </html>

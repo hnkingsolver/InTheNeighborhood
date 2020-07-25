@@ -1,13 +1,17 @@
 *{
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: black;
 }
 
 nav{
     display: flex;
     align-items: center;
-    background-color: black;
-    color: white;
+    color: black;
+    background-color: white;
     text-decoration: none;    
 }
 
@@ -20,6 +24,74 @@ nav ul li{
 
 .contact{
     padding: 10px;
-    border: 1px solid rgba(187, 185, 185, 0.637);
+    border: 1px solid rgba(0, 0, 0, 0.637);
     border-radius: 5px;
 }
+
+.cf:before, .cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    *zoom: 1;
+}
+
+.fl {
+    float: left;
+    _display: inline;
+}
+
+.w-50 {
+    width: 50%;
+    height: 100vh;
+}
+
+.bg-light-gray {
+    background-color: rgb(0, 0, 0);
+}
+
+.bg-near-white {
+    background-color: wheat;
+}
+
+.tc {
+    text-align: center;
+}
+
+.lh-copy {
+    line-height: 1.5;
+}
+
+.pa3 {
+    padding: 1rem;
+}
+
+.f6 {
+    font-size: .875rem;
+    color: white;
+    margin-top: 10rem;
+}
+
+.measure-narrow {
+    max-width: 20em;
+}
+
+.fist_img {
+    width: 17rem;
+    margin-top: 10rem;
+}
+
+@media screen and (min-width: 30em) {
+    .pa5-ns {
+        padding: 4rem;
+    }
+}
+
+
+
+
