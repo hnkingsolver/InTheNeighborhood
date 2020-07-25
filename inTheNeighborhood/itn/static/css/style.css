@@ -1,14 +1,14 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'roboto';
 }
 
 nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding:5px 2%;
+    padding: 0.3rem 5rem;
     background-color: black;
     color: white;
     text-decoration: none;    
@@ -21,8 +21,49 @@ nav ul li{
     align-items: flex-end;
 }
 
+main{
+    margin: 0rem 10rem;
+}
+
+h1{
+    font-size: 5rem;
+    text-shadow: rgb(110, 109, 109) 2px 2px 5px;
+    width: 100%;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    margin: 10rem 0 4rem 0;
+}
+
 .contact{
     padding: 10px;
     border: 1px solid rgba(187, 185, 185, 0.637);
     border-radius: 5px;
+}
+
+.first-paragraph{
+    width: 30rem;
+    font-size: 1.2rem;
+    margin: 2rem;
+}
+
+.second-paragraph{
+    width: 60rem;
+    font-size: 1.2rem;
+    margin: 0 auto;
+    margin-top: 20rem;
+}
+
+.logo{
+    height: 70px;
+}
+
+.office-image{
+    height: 40rem;
+}
+
+#first-main{
+    margin: 5rem 0 0 0;
 }
