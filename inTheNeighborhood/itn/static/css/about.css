@@ -45,10 +45,33 @@ nav ul li{
     float: left;
     _display: inline;
 }
+.lh-copy {
+    line-height: 1.5;
+}
+
+.pa3 {
+    padding: 1rem;
+}
+
+.f5 {
+    font-size: 1rem;
+}
+
+.measure-wide {
+    margin-top: 10rem;
+    max-width: 34em;
+    color: white;
+}
+
+@media screen and (min-width: 30em) {
+    .pa5-ns {
+        padding: 4rem;
+    }
+}
 
 .w-50 {
     width: 50%;
-    height: 100vh;
+    height: 170vh;
 }
 
 .bg-light-gray {
@@ -67,9 +90,9 @@ nav ul li{
     line-height: 1.5;
 }
 
-.pa3 {
+/* .pa3 {
     padding: 1rem;
-}
+} */
 
 .f6 {
     font-size: .875rem;
@@ -182,3 +205,49 @@ nav ul li{
 
 
 
+
+/* footer */
+.ba {
+    border-style: solid;
+    border-width: 1px;
+}
+
+.b--black-10 {
+    border-color: rgba(0, 0, 0, .1);
+}
+
+.br-100 {
+    border-radius: 100%;
+}
+
+.h3 {
+    height: 4rem;
+}
+
+.w3 {
+    width: 4rem;
+}
+
+.pa1 {
+    padding: .25rem;
+}
+
+.pa4 {
+    padding: 2rem;
+}
+
+.tc {
+    text-align: center;
+    display: inline-block;
+}
+
+footer h1 {
+    color: white;
+    text-align: center;
+}
+
+@media screen and (min-width: 769px) {
+    .pa4 {
+        padding-left: 6rem;
+    }
+}
