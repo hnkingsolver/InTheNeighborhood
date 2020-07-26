@@ -74,7 +74,6 @@ nav ul li{
 .f6 {
     font-size: .875rem;
     color: white;
-    margin-top: 10rem;
 }
 
 .measure-narrow {
@@ -90,6 +89,94 @@ nav ul li{
     .pa5-ns {
         padding: 4rem;
     }
+}
+
+
+
+
+
+
+.ba {
+    border-style: solid;
+    border-width: 1px;
+}
+
+.bt {
+    border-top-style: solid;
+    border-top-width: 1px;
+}
+
+.lh-copy {
+    line-height: 1.5;
+}
+
+.mw5 {
+    max-width: 16rem;
+}
+
+.white {
+    color: black;
+}
+
+.bg-near-black {
+    background-color: white;
+}
+
+.pa3 {
+    padding: 1rem;
+}
+
+.pv2 {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+
+.ph3 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.mv0 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.mv4 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.f4 {
+    font-size: 1.25rem;
+}
+
+.f6 {
+    font-size: .875rem;
+}
+
+.measure {
+    max-width: 30em;
+}
+
+.center {
+    margin-top: 10rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media screen and (min-width: 30em) {
+    .mw6-ns {
+        max-width: 32rem;
+    }
+
+    .f5-ns {
+        font-size: 1rem;
+    }
+}
+
+.lower {
+    margin-top: 2rem;
+    color: rgb(148, 147, 147);
 }
 
 
