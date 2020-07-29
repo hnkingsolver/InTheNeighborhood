@@ -1,7 +1,6 @@
 from django.shortcuts import render, HttpResponse, redirect, render
 
-
-
+#just to see server
 def index(request):
     return render(request, "index.html")
 
@@ -10,4 +9,3 @@ def about(request):
 
 def resources(request):
     return render(request, "resources.html")
-
