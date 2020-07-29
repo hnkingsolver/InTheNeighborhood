@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    {% load static %}
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css" />
+    <link rel="stylesheet" href="{% static 'css/about.css' %}" />
+
+    <title>About</title>
+</head>
+
+<body>
+    <!-- nav -->
+    <nav>
+        <img class="nav_logo" src="static/img/Logo_No_Text.png" alt="logo" style="width: 6%; padding: .5rem;" />
+        <div class="nav links">
+            <ul>
+                <li>About</li>
+                <li>Resources</li>
+                <li class="contact">Contact Us</li>
+            </ul>
+        </div>
+    </nav>
+
+    <article class="cf">
+        <div class="fl w-50 bg-near-white tc">
+            <img class="fist_img" src="static/img/fistblm.jpeg" alt="">
+            <div class="pa3 pa5-ns">
+                <p class="f4 lh-copy white measure-wide">
+                    Typography has one plain duty before it and that is to convey information
+                    in writing. No argument or consideration can absolve typography from this
+                    duty. A printed work which cannot be read becomes a product without
+                    purpose.
+                </p>
+            </div>
+            <img class="help_img" src="static/img/waysToHelp.jpeg" alt="">
+        </div>
+        <div class="fl w-50 bg-light-gray tc">
+            <article class="center mw5 mw6-ns hidden mv4 down">
+                <h1 class="f3 yellow mv0 pv2 ph3">Title of card</h1>
+                <div class="pa3">
+                    <p class="f4 white lh-copy measure-wide mv0">
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                        tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
+                        vero eos et accusam et justo duo dolores et ea rebum.
+                    </p>
+                    <p class="f6 f5-ns lh-copy measure mv0 lower">
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                    </p>
+                    <img class="blm_img" src="static/img/blmprotest.jpeg" alt="">
+                </div>
+            </article>
+        </div>
+    </article>
+
+    
+    <footer class="fl tc">
+        <h1 class="f3 yellow mv0 pv2 ph3">MEET OUR TEAM</h1>
+        <div class="tc pa4 ">
+            <img src="static/img/circle-cropped.png" class="br-100 pa1 ba b--black-10 h3 w3" alt="avatar">
+        </div>
+        <div class="tc pa4">
+            <img src="http://tachyons.io/img/logo.jpg" class="br-100 pa1 ba b--black-10 h3 w3" alt="avatar">
+        </div>
+        <div class="tc pa4">
+            <img src="http://tachyons.io/img/logo.jpg" class="br-100 pa1 ba b--black-10 h3 w3" alt="avatar">
+        </div>
+        <div class="tc pa4">
+            <img src="http://tachyons.io/img/logo.jpg" class="br-100 pa1 ba b--black-10 h3 w3" alt="avatar">
+        </div>
+        <div class="tc pa4">
+            <img src="http://tachyons.io/img/logo.jpg" class="br-100 pa1 ba b--black-10 h3 w3" alt="avatar">
+        </div>
+        <div class="tc pa4">
+                <img src="http://tachyons.io/img/logo.jpg" class="br-100 pa1 ba b--black-10 h3 w3" alt="avatar">
+        </div>
+    </footer>
+</body>
+
+</html>

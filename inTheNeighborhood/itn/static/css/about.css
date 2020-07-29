@@ -1,0 +1,116 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: #171717;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    color: #171717;
+    background-color: white;
+    text-decoration: none;    
+}
+
+nav ul li{
+    margin: 10px;
+    list-style-type: none;
+    display: inline-flex;
+    align-items: flex-end;
+}
+
+.contact{
+    padding: 10px;
+    border: 1px solid rgba(23, 23, 23);
+    border-radius: 5px;
+}
+.down {
+    margin-top: 10rem;
+}
+
+.blm_img {
+    width: 17rem;
+    margin-top: 7rem;
+}
+.fist_img {
+    width: 17rem;
+    margin-top: 5rem;
+}
+
+.help_img {
+    width: 17rem;
+    padding-bottom: 2rem;
+}
+
+.lower {
+    margin-top: 2rem;
+    color: rgb(148, 147, 147);
+}
+
+
+/* footer */
+.ba {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #171717;
+}
+
+.b--black-10 {
+    border-color: #171717;
+}
+
+.br-100 {
+    border-radius: 100%;
+}
+
+.h3 {
+    height: 4rem;
+}
+
+.w3 {
+    width: 4rem;
+}
+
+.pa1 {
+    padding: .25rem;
+}
+
+.pa4 {
+    padding: 2rem;
+}
+
+.tc {
+    text-align: center;
+    display: inline-block;
+} */
+
+footer h1 {
+    color: white;
+    text-align: center;
+}
+
+.bg-light-gray {
+    background-color: #171717;
+}
+
+.bg-near-white {
+    background-color: #171717;
+}
+
+
+@media screen and (min-width: 769px) {
+    .pa4 {
+        padding-left: 6rem;
+    }
+    .tc {
+        vertical-align: middle;
+    }
+}
+
+.f3 {
+    font-family: monospace;
+}
+
