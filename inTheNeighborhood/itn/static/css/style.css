@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    background-color: black;
+    color: white;
+    text-decoration: none;    
+}
+
+nav ul li{
+    margin: 10px;
+    list-style-type: none;
+    display: inline-flex;
+    align-items: flex-end;
+}
+
+.contact{
+    padding: 10px;
+    border: 1px solid rgba(187, 185, 185, 0.637);
+    border-radius: 5px;
+}
