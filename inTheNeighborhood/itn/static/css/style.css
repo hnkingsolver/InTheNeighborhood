@@ -42,6 +42,7 @@ h1{
     width: 100%;
     color: white;
     text-transform: uppercase;
+    text-align: center;
 }
 
 footer{
@@ -50,21 +51,17 @@ footer{
     margin: 10rem 0 4rem 0;
 }
 
-.contact{
-    padding: 10px;
-    border: 1px solid rgba(187, 185, 185, 0.637);
-    border-radius: 5px;
-}
 
 .first-paragraph{
-    width: 30rem;
+    /* width: 30rem; */
     font-size: 1.2rem;
     margin: 2rem;
     color: white;
+    
 }
 
 .second-paragraph{
-    width: 60rem;
+    /* width: 60rem; */
     font-size: 1.2rem;
     margin: 0 auto;
     margin-top: 20rem;
