@@ -39,7 +39,7 @@ main{
 
 h1{
     font-size: 5rem;
-    text-shadow: rgb(110, 109, 109) 2px 2px 5px;
+    /* text-shadow: rgb(209, 197, 23) 2px 2px 5px; */
     width: 100%;
     color: white;
     text-transform: uppercase;
