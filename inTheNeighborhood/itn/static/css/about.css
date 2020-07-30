@@ -1,7 +1,6 @@
 *{
     margin: 0px;
     padding: 0px;
-    font-family: 'roboto';
 }
 
 body {
@@ -115,7 +114,4 @@ footer h1 {
     }
 }
 
-.f3 {
-    font-family: monospace;
-}
 
