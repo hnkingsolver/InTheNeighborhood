@@ -4,6 +4,10 @@
     font-family: 'roboto';
 }
 
+body {
+    background-color: #171717;
+}
+
 .measure2 {
     max-width: 50em;
 }
@@ -13,8 +17,8 @@ nav{
     align-items: center;
     justify-content: space-between;
     padding: 0.3rem 5rem;
-    background-color: #171717;
-    color: white;
+    background-color: white;
+    color: #171717;
     text-decoration: none;    
 }
 
