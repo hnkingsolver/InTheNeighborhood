@@ -28,3 +28,9 @@ nav ul li{
     display: inline-flex;
     align-items: flex-end;
 }
+
+.nav_logo{
+    width: 6%; 
+    min-width: 3rem;
+    padding: .5rem;
+}
