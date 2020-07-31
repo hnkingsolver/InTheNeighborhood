@@ -11,4 +11,4 @@ def index(request):
 >>>>>>> hannah
 =======
     return render(request, "resources.html")
->>>>>>> sher
+>>>>>>>

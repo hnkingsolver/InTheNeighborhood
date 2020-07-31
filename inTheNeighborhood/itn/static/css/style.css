@@ -1,20 +1,14 @@
 *{
     margin: 0;
     padding: 0;
-<<<<<<< HEAD
     font-family: 'roboto';
-=======
->>>>>>> sher
 }
 
 nav{
     display: flex;
     align-items: center;
-<<<<<<< HEAD
     justify-content: space-between;
     padding: 0.3rem 5rem;
-=======
->>>>>>> sher
     background-color: black;
     color: white;
     text-decoration: none;    
@@ -27,7 +21,6 @@ nav ul li{
     align-items: flex-end;
 }
 
-<<<<<<< HEAD
 main{
     margin: 0rem 10rem;
 }
@@ -44,14 +37,11 @@ footer{
     margin: 10rem 0 4rem 0;
 }
 
-=======
->>>>>>> sher
 .contact{
     padding: 10px;
     border: 1px solid rgba(187, 185, 185, 0.637);
     border-radius: 5px;
 }
-<<<<<<< HEAD
 
 .first-paragraph{
     width: 30rem;
@@ -77,5 +67,3 @@ footer{
 #first-main{
     margin: 5rem 0 0 0;
 }
-=======
->>>>>>> sher
