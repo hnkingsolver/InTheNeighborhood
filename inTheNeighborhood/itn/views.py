@@ -1,14 +1,11 @@
 from django.shortcuts import render, HttpResponse, redirect, render
 
-# Create your views here.
-from django.shortcuts import render	# notice the import!
+#just to see server
 def index(request):
-<<<<<<< HEAD
-<<<<<<< HEAD
     return render(request, "index.html")
-=======
+
+def about(request):
     return render(request, "about.html")
->>>>>>> hannah
-=======
+
+def resources(request):
     return render(request, "resources.html")
->>>>>>>

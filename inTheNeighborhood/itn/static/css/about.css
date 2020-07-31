@@ -10,8 +10,10 @@ body {
 nav{
     display: flex;
     align-items: center;
-    color: #171717;
+    justify-content: space-between;
+    padding: 0.3rem 5rem;
     background-color: white;
+    color: #171717;
     text-decoration: none;    
 }
 
@@ -20,13 +22,15 @@ nav ul li{
     list-style-type: none;
     display: inline-flex;
     align-items: flex-end;
+    background-color: white;
 }
 
-.contact{
-    padding: 10px;
-    border: 1px solid rgba(23, 23, 23);
-    border-radius: 5px;
+.nav_logo{
+    width: 6%; 
+    min-width: 3rem;
+    padding: .5rem;
 }
+
 .down {
     margin-top: 10rem;
 }
@@ -110,7 +114,4 @@ footer h1 {
     }
 }
 
-.f3 {
-    font-family: monospace;
-}
 

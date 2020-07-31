@@ -19,16 +19,28 @@ nav ul li{
     list-style-type: none;
     display: inline-flex;
     align-items: flex-end;
+    background-color: white;
+}
+
+.nav_logo{
+    width: 6%; 
+    min-width: 3rem;
+    padding: .5rem;
 }
 
 main{
     margin: 0rem 10rem;
 }
 
+
 h1{
     font-size: 5rem;
-    text-shadow: rgb(110, 109, 109) 2px 2px 5px;
+    /* text-shadow: rgb(209, 197, 23) 2px 2px 5px; */
     width: 100%;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    
 }
 
 footer{
@@ -44,16 +56,17 @@ footer{
 }
 
 .first-paragraph{
-    width: 30rem;
     font-size: 1.2rem;
     margin: 2rem;
+    color: white;
+    
 }
 
 .second-paragraph{
-    width: 60rem;
     font-size: 1.2rem;
     margin: 0 auto;
     margin-top: 20rem;
+    color: white;
 }
 
 .logo{
