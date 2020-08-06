@@ -9,3 +9,6 @@ def about(request):
 
 def resources(request):
     return render(request, "resources.html")
+
+def articles(request):
+    return render(request, "articles.html")
