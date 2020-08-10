@@ -12,3 +12,18 @@ def resources(request):
 
 def articles(request):
     return render(request, "articles.html")
+
+def books(request):
+    return render(request, "books.html")
+
+def beautyBrands(request):
+    return render(request, "beauty_brands.html")
+
+def donate(request):
+    return render(request, "donate.html")
+
+def localArtists(request):
+    return render(request, "local_artists.html")
+
+def restaurants(request):
+    return render(request, "restaurants.html")
