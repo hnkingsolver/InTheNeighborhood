@@ -4,3 +4,6 @@ body {
 table{
     background-color: white;
 }
+.back_to_button {
+    font-size: large;
+}
