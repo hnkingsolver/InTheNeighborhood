@@ -1,12 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/local_artists.css' %}" />
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css" />
     <title>Local Artists</title>
 </head>
+
+<script src="https://use.fontawesome.com/fc14894b17.js"></script>
+
 <body>
-    
+    <div class="back_to_button w-100 w-60-ns pl3-ns avenir">
+        <a class="db pv4 ph3 ph0-l no-underline white dim" href="/resources"><i class="fa white fa-long-arrow-left"
+                aria-hidden="true"></i> Back to resources</a>
+    </div>
+    <h1 class="f1-l fw1 baskerville mt0 tc yellow ttu lh-title">Dallas Local Artists</h1>
+
+    <!-- Abi Salami -->
+    <a class="db center mw5 tc black link dim" title="Abi Salami"
+        href="https://www.taunesbunny.com/shop">
+
+        <img class="db ba b--black-10"/ alt="Abi Salami painting"
+            src="https://assets.dmagstatic.com/wp-content/uploads/2020/06/Suffering-and-Smiling-24x30-in-acrylic-on-canvas.jpg">
+
+        <dl class="mt2 f6 lh-copy">
+            <dt class="clip white">Title</dt>
+            <dd class="ml0 white">Abi Salami</dd>
+            <dt class="clip">Artist</dt>
+            <dd class="ml0 gray">Painter</dd>
+        </dl>
+    </a>
+
+<!-- Jasmine Lewis -->
+    <a class="db center mw5 tc black link dim" title="Abi Salami"
+        href="https://goodgalco.bigcartel.com/">
+
+        <img class="db ba b--black-10"/ alt="Abi Salami painting"
+            src="https://assets.dmagstatic.com/wp-content/uploads/2020/06/IMG_7236-1200x796.jpg">
+
+        <dl class="mt2 f6 lh-copy">
+            <dt class="clip white">Title</dt>
+            <dd class="ml0 white">Jasmine Lewis</dd>
+            <dt class="clip">Artist</dt>
+            <dd class="ml0 gray">Fashion designer</dd>
+        </dl>
+    </a>
+
+    <!-- Jeremy Biggers -->
+    <a class="db center mw5 tc black link dim" title="Abi Salami"
+        href="https://jeremybiggers.com/">
+
+        <img class="db ba b--black-10"/ alt="Abi Salami painting"
+            src="https://assets.dmagstatic.com/wp-content/uploads/2020/06/DMagazineJeremyBiggers-1200x800.jpg">
+
+        <dl class="mt2 f6 lh-copy">
+            <dd class="ml0 white">Jeremy Biggers</dd>
+            <dt class="clip">Artist</dt>
+            <dd class="ml0 gray">Multimedia artist </dd>
+        </dl>
+    </a>
 </body>
+
 </html>
