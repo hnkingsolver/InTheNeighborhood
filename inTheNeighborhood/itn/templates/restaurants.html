@@ -1,12 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/restaurants.css' %}" />
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css" />
     <title>Restaurants</title>
 </head>
+<script src="https://use.fontawesome.com/fc14894b17.js"></script>
+
+
 <body>
-    
+    <div class="back_to_button w-100 w-60-ns pl3-ns avenir">
+        <a class="db pv4 ph3 ph0-l no-underline white dim" href="/resources"><i class="fa white fa-long-arrow-left"
+                aria-hidden="true"></i> Back to resources</a>
+    </div>
+
+
+    <section class="mw7 center">
+        <h2 class="athelas f2 tc ph3 yellow ph0-l">Restaurants</h2>
+        <!-- 4th Quarter Bar & Grill -->
+        <article class="pv4 bt bb white b--black-10 ph3 ph0-l">
+            <a class="db pv4 ph3 ph0-l no-underline white dim" href="http://www.4thquartersportsgrill.com/">
+                <div class="flex flex-column flex-row-ns">
+                    <div class="w-100 w-60-ns pr3-ns order-2 order-1-ns">
+                        <h1 class="f3 athelas mt0 yellow lh-title">4th Quarter Bar & Grill</h1>
+                        <p class="f5 f5-l lh-copy athelas">
+                            American grill fare & drinks offered in upbeat digs with nightly specials & DJ music.
+                        </p>
+                    </div>
+                    <div class="pl3-ns order-1 order-2-ns mb4 mb0-ns w-100 w-40-ns">
+                        <img src="data:image/png;base64,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"
+                            class="db" alt="logo">
+                    </div>
+                </div>
+            </a>
+        </article>
+        <!-- Way's -->
+        <article class="pv4 bt bb white b--black-10 ph3 ph0-l">
+            <a class="db pv4 ph3 ph0-l no-underline white dim" href="https://a-taste-of-ways-catering.business.site/">
+                <div class="flex flex-column flex-row-ns">
+                    <div class="w-100 w-60-ns pr3-ns order-2 order-1-ns">
+                        <h1 class="f3 athelas mt0 yellow lh-title">A Taste of Way's Catering</h1>
+                        <p class="f5 f5-l lh-copy athelas">
+                            A family owned and operated establishment, creating soul food ranging from oxtails,Cajun
+                            seafood, and even turkey legs.
+                            No week is ever boring with Ways, as they change their menu weekly.
+                        </p>
+                    </div>
+                    <div class="pl3-ns order-1 order-2-ns mb4 mb0-ns w-100 w-40-ns">
+                        <img src="https://lh3.googleusercontent.com/47SovOVKhN-m9YOkGVSlLjguoY4PXr_2FR_wwqpjeWkau9JJKpWX6sb_vSAao9453jUXVC8FqnWVt1Ql=w768-h768-n-o-v1"
+                            class="db" alt="logo">
+                    </div>
+                </div>
+            </a>
+        </article>
+        <!-- Aldeez's -->
+        <article class="pv4 bt bb white b--black-10 ph3 ph0-l">
+            <a class="db pv4 ph3 ph0-l no-underline white dim" href="https://aldeez.imenutogo.com/">
+                <div class="flex flex-column flex-row-ns">
+                    <div class="w-100 w-60-ns pr3-ns order-2 order-1-ns">
+                        <h1 class="f3 athelas mt0 yellow lh-title">Aldeez Carribean Restaurant </h1>
+                        <p class="f5 f5-l lh-copy athelas">
+                            Lively Caribbean restaurant & nightspot with dancing, sports on TV & music events.
+                            Island-inspired cocktails, fresh juices and island vibes.
+                        </p>
+                    </div>
+                    <div class="pl3-ns order-1 order-2-ns mb4 mb0-ns w-100 w-40-ns">
+                        <img src="https://image2.owler.com/10810003-1504447391449.png" class="db" alt="logo">
+                    </div>
+                </div>
+            </a>
+        </article>
+        <!-- Aunt Irene's Kitchen -->
+        <article class="pv4 bt bb white b--black-10 ph3 ph0-l">
+            <a class="db pv4 ph3 ph0-l no-underline white dim" href="https://auntirene.com/">
+                <div class="flex flex-column flex-row-ns">
+                    <div class="w-100 w-60-ns pr3-ns order-2 order-1-ns">
+                        <h1 class="f3 athelas mt0 yellow lh-title">Aunt Irene's Kitchen </h1>
+                        <p class="f5 f5-l lh-copy athelas">
+                            Fried seafood, chicken & other hearty Cajun-Creole eats served at the counter in an unfussy
+                            space.
+                        </p>
+                    </div>
+                    <div class="pl3-ns order-1 order-2-ns mb4 mb0-ns w-100 w-40-ns">
+                        <img src="https://n1.snoopfcdn.com/data/logos/aunt-irenes-kitchen-dallas-731200.jpg" class="db"
+                            alt="logo">
+                    </div>
+                </div>
+            </a>
+        </article>
+        <!-- Baby Back Shak -->
+        <article class="pv4 bt bb white b--black-10 ph3 ph0-l">
+            <a class="db pv4 ph3 ph0-l no-underline white dim" href="https://shakrubbybabybackshak.com/">
+                <div class="flex flex-column flex-row-ns">
+                    <div class="w-100 w-60-ns pr3-ns order-2 order-1-ns">
+                        <h1 class="f3 athelas mt0 yellow lh-title">Baby Back Shak </h1>
+                        <p class="f5 f5-l lh-copy athelas">
+                            Spartan rib joint serves Memphis-style plates, sandwiches & sides during lunch & the early
+                            evening.
+                        </p>
+                    </div>
+                    <div class="pl3-ns order-1 order-2-ns mb4 mb0-ns w-100 w-40-ns">
+                        <img src="https://texasbbqposse.com/wp-content/uploads/2014/02/IMG_0513.jpg" class="db"
+                            alt="logo">
+                    </div>
+                </div>
+            </a>
+        </article>
+        <!-- Bam's Vegan -->
+        <article class="pv4 bt bb white b--black-10 ph3 ph0-l">
+            <a class="db pv4 ph3 ph0-l no-underline white dim" href="https://shakrubbybabybackshak.com/">
+                <div class="flex flex-column flex-row-ns">
+                    <div class="w-100 w-60-ns pr3-ns order-2 order-1-ns">
+                        <h1 class="f3 athelas mt0 yellow lh-title">Bam's Vegan </h1>
+                        <p class="f5 f5-l lh-copy athelas">
+                            Vegan pop up/food truck near Dallas Farmers Market... also sells merch including eCookbooks!
+                        </p>
+                    </div>
+                    <div class="pl3-ns order-1 order-2-ns mb4 mb0-ns w-100 w-40-ns">
+                        <img src="https://www.leafygreenz.com/wp-content/uploads/2018/08/bamsarticle2.jpg" class="db"
+                            alt="logo">
+                    </div>
+                </div>
+            </a>
+        </article>
+    </section>
 </body>
+
 </html>
