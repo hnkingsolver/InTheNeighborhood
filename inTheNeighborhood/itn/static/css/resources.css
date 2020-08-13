@@ -7,10 +7,6 @@ body {
     background-color: #171717;
 }
 
-.measure2 {
-    max-width: 50em;
-}
-
 nav{
     display: flex;
     align-items: center;

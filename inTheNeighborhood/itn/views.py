@@ -10,9 +10,6 @@ def about(request):
 def resources(request):
     return render(request, "resources.html")
 
-def articles(request):
-    return render(request, "articles.html")
-
 def books(request):
     return render(request, "books.html")
 
@@ -27,3 +24,6 @@ def localArtists(request):
 
 def restaurants(request):
     return render(request, "restaurants.html")
+
+def products_services(request):
+    return render(request, "products_services.html")

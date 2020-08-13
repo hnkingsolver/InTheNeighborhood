@@ -1,9 +1,13 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background-color: #171717;
 }
-table{
-    background-color: white;
-}
+
 .back_to_button {
     font-size: large;
 }
