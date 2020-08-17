@@ -184,6 +184,20 @@
             <dd class="ml0 yellow">Mielle Organics</dd>
         </dl>
     </a>
+
+    <!-- LOOP for beauty brands in database -->
+    {% for brand in brands %}
+    <a class="db center mw5 pb5 tc black link dim" title="{{ brand.name }}"
+        href="{{ brand.link }}">
+
+        <img class="db ba b--black-10"/ alt="Mielle Organics"
+            src="{{ brand.photo }}">
+
+        <dl class="mt2 f6 lh-copy">
+            <dd class="ml0 yellow">{{ brand.name }}</dd>
+        </dl>
+    </a>
+    {% endfor %}
 </body>
 
 </html>

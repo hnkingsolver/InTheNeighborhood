@@ -247,6 +247,30 @@
                 </div>
             </a>
         </article>
+        <!-- LOOP for books in database -->
+        {% for book in books %}
+        <article class="bt bb b--black-10">
+            <a class="db pv4 ph3 ph0-l no-underline white dim"
+                href="{{ book.link }}">
+                <div class="flex flex-column flex-row-ns">
+                    <div class="pr3-ns mb4 mb0-ns w-100 w-40-ns">
+                        <img src="{{ book.photo }}"
+                            class="db smaller" alt="book">
+                        <p class="gray">{{ book.publisher }}</p>
+                    </div>
+                    <div class="w-100 w-60-ns pl3-ns">
+                        <h1 class="f3 fw1 baskerville mt0 lh-title">
+                            {{ book.title }}
+                        </h1>
+                        <p class="f6 f5-l lh-copy">
+                            {{ book.description }}
+                        </p>
+                        <p class="f6 lh-copy yellow mv0">By {{ book.author }}</p>
+                    </div>
+                </div>
+            </a>
+        </article>
+        {% endfor %}
     </section>
 </body>
 

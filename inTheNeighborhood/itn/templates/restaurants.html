@@ -128,6 +128,25 @@
                 </div>
             </a>
         </article>
+        <!-- LOOP for restaurants in database -->
+        {% for restaurant in restaurants %}
+        <article class="pv4 bt bb white b--black-10 ph3 ph0-l">
+            <a class="db pv4 ph3 ph0-l no-underline white dim" href="{{ restaurant.link }}">
+                <div class="flex flex-column flex-row-ns">
+                    <div class="w-100 w-60-ns pr3-ns order-2 order-1-ns">
+                        <h1 class="f3 athelas mt0 yellow lh-title">{{ restaurant.name }}</h1>
+                        <p class="f5 f5-l lh-copy athelas">
+                            {{ restaurant.description }}
+                        </p>
+                    </div>
+                    <div class="pl3-ns order-1 order-2-ns mb4 mb0-ns w-100 w-40-ns">
+                        <img src="{{ restaurant.photo }}" class="db"
+                            alt="logo">
+                    </div>
+                </div>
+            </a>
+        </article>
+        {% endfor %}
     </section>
 </body>
 

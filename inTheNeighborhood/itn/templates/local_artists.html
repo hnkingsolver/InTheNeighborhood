@@ -36,7 +36,7 @@
     </a>
 
 <!-- Jasmine Lewis -->
-    <a class="db center mw5 tc black link dim" title="Abi Salami"
+    <a class="db center mw5 tc black link dim" title="Jasmine Lewisi"
         href="https://goodgalco.bigcartel.com/">
 
         <img class="db ba b--black-10"/ alt="Abi Salami painting"
@@ -51,7 +51,7 @@
     </a>
 
     <!-- Jeremy Biggers -->
-    <a class="db center mw5 tc black link dim" title="Abi Salami"
+    <a class="db center mw5 tc black link dim" title="Jeremy Biggers"
         href="https://jeremybiggers.com/">
 
         <img class="db ba b--black-10"/ alt="Abi Salami painting"
@@ -65,7 +65,7 @@
     </a>
 
     <!-- Charles Smith II -->
-    <a class="db center mw5 tc black link dim" title="Abi Salami"
+    <a class="db center mw5 tc black link dim" title="Charles Smith II"
         href="https://www.smiththesecond.com/shop">
 
         <img class="db ba b--black-10"/ alt="Abi Salami painting"
@@ -77,6 +77,22 @@
             <dd class="ml0 gray">Fashion designer </dd>
         </dl>
     </a>
+
+    <!-- LOOP for artists in database -->
+    {% for artist in artists %}
+    <a class="db center mw5 tc black link dim" title="{{ artist.name }}"
+    href="{{ artist.link }}">
+
+        <img class="db ba b--black-10"/ alt="Abi Salami painting"
+            src="{{ artist.photo }}">
+
+        <dl class="mt2 f6 lh-copy">
+            <dd class="ml0 white">{{ artist.name }}</dd>
+            <dt class="clip">Artist</dt>
+            <dd class="ml0 gray">{{ artist.category }}</dd>
+        </dl>
+    </a>
+    {% endfor %}
 </body>
 
 </html>

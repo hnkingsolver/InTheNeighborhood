@@ -90,3 +90,12 @@ footer{
 #first-main{
     margin: 5rem 0 0 0;
 }
+
+.col{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.container{
+    color: white;
+}

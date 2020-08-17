@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    {% load static %}
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css" />
+    <link rel="stylesheet" href="{% static 'css/login.css' %}" />
+
+    <title>New Beauty Brand Form</title>
+</head>
+
+<body>
+    <!-- nav -->
+    <nav>
+        <a href="/"><img class="nav_logo" src="static/img/Logo_No_Text.png" alt="logo" /></a>
+        <div class="nav links">
+            <ul>
+                <li><a href="/about">About</a></li>
+                <li><a href="/resources">Resources</a></li>
+                <li class="contact"> <a class="f6 link dim br-pill ba ph3 pv2 mb2 dib black" href="#0">Contact Us</a>
+            </ul>
+        </div>
+    </nav>
+    <!-- end nav -->
+    <div class="container">
+        <div class="row">
+            <h1>Submit a Local Beauty Brand</h1>
+        </div>
+        <div class="row">
+            <form action="/create-beauty" method="POST">
+                {% csrf_token %}
+                <div class="col">
+                    <p><label for="name">Name</label></p>
+                    <p><label for="category">Category</label></p>
+                    <p><label for="photo">Photo URL</label></p>
+                    <p><label for="link">Link</label></p>
+                </div>
+                <div class="col">
+                    <p><input type="text" name="name" required></p>
+                    <p><input type="text" name="category"></p>
+                    <p><input type="url" name="photo"></p>
+                    <p><input type="url" name="link"></p>
+                    <p><button type="submit">Submit</button></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <img src="static/img/logo4.png" alt="itn" style="height: 50px;">
+    </footer>
+</body>
+
+</html>
