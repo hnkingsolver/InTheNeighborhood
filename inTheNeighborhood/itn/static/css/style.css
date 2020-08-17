@@ -45,9 +45,9 @@ main{
 
 h1{
     font-size: 5rem;
-    text-shadow: rgb(255, 255, 255) 2px 2px 5px;
+    text-shadow: rgb(201, 185, 66) 2px 2px 5px;
     width: 100%;
-    color: white;
+    color: #FFD801;
     text-transform: uppercase;
     text-align: center;
     

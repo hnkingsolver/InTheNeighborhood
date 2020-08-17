@@ -27,28 +27,28 @@
     <!-- end nav -->
     <div class="container">
         <div class="row">
-            <h1>Submit a Book or Article</h1>
+            <h1 class="yellow f1 tc">Submit a Book or Article</h1>
         </div>
         <div class="row">
-            <form action="/create-book" method="POST">
+            <form action="/create-book" method="POST" class="tc">
                 {% csrf_token %}
                 <div class="col">
-                    <p><label for="title">Title</label></p>
-                    <p><label for="author">Author</label></p>
-                    <p><label for="publisher">Publisher</label></p>
-                    <p><label for="category">Category</label></p>
-                    <p><label for="description">Description</label></p>
-                    <p><label for="photo">Photo URL</label></p>
-                    <p><label for="link">Link</label></p>
+                    <p class="pb4"><label for="title">Title</label></p>
+                    <p class="pb4"><label for="author">Author</label></p>
+                    <p class="pb4"><label for="publisher">Publisher</label></p>
+                    <p class="pb4"><label for="category">Category</label></p>
+                    <p class="pb4"><label for="description">Description</label></p>
+                    <p class="pb4"><label for="photo">Photo URL</label></p>
+                    <p class="pb4"><label for="link">Link</label></p>
                 </div>
                 <div class="col">
-                    <p><input type="text" name="title" required></p>
-                    <p><input type="text" name="author" required></p>
-                    <p><input type="text" name="publisher"></p>
-                    <p><input type="text" name="category"></p>
-                    <p><textarea name="description" cols="30" rows="10"></textarea></p>
-                    <p><input type="url" name="photo"></p>
-                    <p><input type="url" name="link"></p>
+                    <p class="pb4"><input type="text" name="title" required></p>
+                    <p class="pb4"><input type="text" name="author" required></p>
+                    <p class="pb4"><input type="text" name="publisher"></p>
+                    <p class="pb4"><input type="text" name="category"></p>
+                    <p class="pb4"><textarea name="description" cols="30" rows="10"></textarea></p>
+                    <p class="pb4"><input type="url" name="photo"></p>
+                    <p class="pb4"><input type="url" name="link"></p>
                     <p><button type="submit">Submit</button></p>
                 </div>
             </form>
