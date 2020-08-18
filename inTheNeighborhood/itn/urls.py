@@ -14,9 +14,11 @@ urlpatterns = [
     path('new-artist', views.new_artist),
     path('new-restaurant', views.new_restaurant),
     path('new-beauty', views.new_beauty),
+    path('new-article', views.new_article),
     path('new-book', views.new_book),
     path('create-artist', views.create_artist),
     path('create-restaurant', views.create_restaurant),
     path('create-beauty', views.create_beauty),
     path('create-book', views.create_book),
+    path('create-article', views.create_article),
 ]

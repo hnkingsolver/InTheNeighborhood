@@ -19,7 +19,17 @@ class BookManager(models.Manager):
             errors['short_title'] = "Title must be at least 2 characters"
         existing_book = Book.objects.filter(title=requestPOST['title'])
         if len(existing_book) > 0 > 0:
-            errors['duplicate_resource'] = "This book/article already exists in our database"
+            errors['duplicate_resource'] = "This book already exists in our database"
+        return errors
+    
+class ArticleManager(models.Manager):
+    def create_validator(self,requestPOST):
+        errors = {}
+        if len(requestPOST['title']) < 2:
+            errors['short_title'] = "Title must be at least 2 characters"
+        existing_book = Book.objects.filter(title=requestPOST['title'])
+        if len(existing_book) > 0 > 0:
+            errors['duplicate_resource'] = "This article already exists in our database"
         return errors
 
 class Artist(models.Model):
@@ -61,3 +71,11 @@ class Book(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     objects = BookManager()
+    
+class Article(models.Model):
+    title = models.CharField(max_length=250)
+    author = models.CharField(max_length=100)
+    link = models.CharField(max_length=250)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    objects = ArticleManager()

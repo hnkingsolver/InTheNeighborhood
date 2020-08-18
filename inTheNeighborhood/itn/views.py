@@ -1,5 +1,5 @@
 from django.shortcuts import render, HttpResponse, redirect
-from .models import Artist, Restaurant, BeautyBrand, Book
+from .models import Artist, Restaurant, BeautyBrand, Book, Article
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
@@ -58,6 +58,10 @@ def new_beauty(request):
 @login_required
 def new_book(request):
     return render(request, "new_book.html")
+
+@login_required
+def new_article(request):
+    return render(request, "new_article.html")
 
 def create_artist(request):
     if request.method == 'POST':
@@ -123,6 +127,21 @@ def create_book(request):
                 publisher = request.POST['publisher'],
                 description = request.POST['description'],
                 photo = request.POST['photo'],
+                link = request.POST['link']
+            )
+            return redirect('/books-articles')
+
+def create_article(request):
+    if request.method == 'POST':
+        errors = Article.objects.create_validator(request.POST)
+        if len(errors) > 0:
+            for key, value in errors.items():
+                messages.error(request, value)
+                return redirect('/new-article')
+        else:
+            Article.objects.create(
+                title = request.POST['title'],
+                author = request.POST['author'],
                 link = request.POST['link']
             )
             return redirect('/books-articles')
