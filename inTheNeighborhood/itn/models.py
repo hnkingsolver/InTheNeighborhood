@@ -27,8 +27,8 @@ class ArticleManager(models.Manager):
         errors = {}
         if len(requestPOST['title']) < 2:
             errors['short_title'] = "Title must be at least 2 characters"
-        existing_book = Book.objects.filter(title=requestPOST['title'])
-        if len(existing_book) > 0 > 0:
+        existing_article = Book.objects.filter(title=requestPOST['title'])
+        if len(existing_article) > 0 > 0:
             errors['duplicate_resource'] = "This article already exists in our database"
         return errors
 

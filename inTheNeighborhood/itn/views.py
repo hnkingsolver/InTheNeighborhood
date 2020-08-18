@@ -15,7 +15,8 @@ def resources(request):
 
 def books(request):
     context = {
-        'books': Book.objects.all()
+        'books': Book.objects.all(),
+        'articles': Article.objects.all()
     }
     return render(request, "books.html", context)
 
