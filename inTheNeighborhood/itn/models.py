@@ -79,3 +79,30 @@ class Article(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     objects = ArticleManager()
+
+class Product(models.Model):
+    name = models.CharField(max_length=250)
+    category = models.CharField(max_length=100)
+    photo = models.CharField(max_length=250)
+    link = models.CharField(max_length=250)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    objects = ResourceManager()
+
+class Service(models.Model):
+    name = models.CharField(max_length=250)
+    category = models.CharField(max_length=100)
+    photo = models.CharField(max_length=250)
+    link = models.CharField(max_length=250)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    objects = ResourceManager()
+
+class FashionBrand(models.Model):
+    name = models.CharField(max_length=100)
+    category = models.CharField(max_length=100)
+    photo = models.CharField(max_length=250)
+    link = models.CharField(max_length=250)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    objects = ResourceManager()

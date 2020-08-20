@@ -1,5 +1,5 @@
 from django.shortcuts import render, HttpResponse, redirect
-from .models import Artist, Restaurant, BeautyBrand, Book, Article
+from .models import Artist, Restaurant, BeautyBrand, Book, Article, Product, Service, FashionBrand
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
