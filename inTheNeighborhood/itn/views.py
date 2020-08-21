@@ -42,7 +42,11 @@ def restaurants(request):
     return render(request, "restaurants.html", context)
 
 def products_services(request):
-    return render(request, "products_services.html")
+    context = {
+        'products': Product.objects.all(),
+        'services': Service.objects.all()
+    }
+    return render(request, "products_services.html", context)
 
 @login_required
 def new_artist(request):
@@ -146,3 +150,35 @@ def create_article(request):
                 link = request.POST['link']
             )
             return redirect('/books-articles')
+        
+def create_product(request):
+    if request.method == 'POST':
+        errors = Product.objects.create_validator(request.POST)
+        if len(errors) > 0:
+            for key, value in errors.items():
+                messages.error(request, value)
+                return redirect('/new-product')
+        else:
+            Product.objects.create(
+                name = request.POST['name'],
+                category = request.POST['category'],
+                photo = request.POST['photo'],
+                link = request.POST['link']
+            )
+            return redirect('/products-services')
+
+def create_service(request):
+    if request.method == 'POST':
+        errors = Service.objects.create_validator(request.POST)
+        if len(errors) > 0:
+            for key, value in errors.items():
+                messages.error(request, value)
+                return redirect('/new-service')
+        else:
+            Service.objects.create(
+                name = request.POST['name'],
+                category = request.POST['category'],
+                photo = request.POST['photo'],
+                link = request.POST['link']
+            )
+            return redirect('/products-services')
