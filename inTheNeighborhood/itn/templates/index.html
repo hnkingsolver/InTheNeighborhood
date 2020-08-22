@@ -7,7 +7,6 @@
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:wght@300;400&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-    
     <title>In the Neighborhood | Team of software developer helping small businesses build websites</title>
 </head>
 
@@ -66,4 +65,20 @@
     
     
 </body>
+
+<!-- Modal Section -->
+<div class="bg-modal">
+    <div class="modal-content">
+        <div class="close">+</div>
+        <div class="modal-inner">
+            <h1>Election Day is Tuesday, November 3, 2020!</h1>
+            <h2>Are you registered to vote in your state?</h2>
+            <p>In Texas, the deadline to register <br>(for both mail-in + in-person) is October 5, 2020.</p>
+            <p><a class="vote-link" target="_blank" href="https://www.nass.org/can-I-vote/voter-registration-status">Let me check</a></p>
+        </div>
+    </div>
+</div>
+
+<script src="{% static 'js/index.js' %}"></script>
+
 </html>
