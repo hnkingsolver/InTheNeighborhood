@@ -182,3 +182,6 @@ def create_service(request):
                 link = request.POST['link']
             )
             return redirect('/products-services')
+        
+def contact_us(request):
+    return render(request, "contact_us_form.html")

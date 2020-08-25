@@ -23,4 +23,5 @@ urlpatterns = [
     path('create-article', views.create_article),
     path('create-product', views.create_product),
     path('create-service', views.create_service),
+    path('contact-us', views.contact_us),
 ]
