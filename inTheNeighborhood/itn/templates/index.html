@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:wght@300;400&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:wght@300;400&family=Roboto:wght@300;400;500&display=swap"
+        rel="stylesheet">
     <title>In the Neighborhood | Team of software developer helping small businesses build websites</title>
 </head>
 
@@ -15,16 +18,29 @@
         <a href="/"><img class="nav_logo" src="static/img/Logo_No_Text.png" alt="logo" /></a>
         <div class="nav links">
             <ul>
-                <li><a href="/about">About</a></li>
-                <li><a href="/resources">Resources</a></li>
-                <li class="contact">  <a href="/contact-us">Contact Us</a></li>
+                <li class="f5 fw6 black link dim"><a href="/about">About</a></li>
+                <li class="f5 fw6 black link dim"><a href="/resources">Resources</a></li>
+                <li class="contact"> <a class="f6 link dim br-pill ba ph3 pv2 mb2 dib black" href="/contact-us">Contact
+                        Us</a>
+                </li>
             </ul>
         </div>
     </nav>
 
-    <main>
+    <article class="pa3 pa5-ns">
+        <h1 class="f3 f1-m yellow ttu tc f-headline-l">We're The Neighborhood Devs</h1>
+        <p class="f4 white tc lh-copy">
+            We make websites for Black-owned businesses in DFW for free. Why?
+        </p>
+        <p class="f4 white tc pt6 lh-copy">
+            Because we give a damn. Giving Black-owned businesses free websites helps them be more marketable, reach
+            more consumers, and, most important, visibility. Because they are in the neighborhood.
+        </p>
+    </article>
+    <!-- <main>
         <div id="first-main">
             <h1>We’re the Neighborhood Devs</h1>
+           
 
             <div class="first-paragraph">
                 <p>We make websites for Black-owned businesses in DFW for free. Why? </p><br>
@@ -37,13 +53,13 @@
                 <p>Because we give a damn. Giving Black-owned businesses free websites helps them be more marketable, reach more consumers, and, most important, visibility. Because they are in the neighborhood.</p><br>
             </div>
         </div>
-    </main>
+    </main> -->
 
     <footer>
         <img src="static/img/logo4.png" alt="itn" style="height: 50px;">
     </footer>
-    
-    
+
+
 </body>
 
 <!-- Modal Section -->
@@ -54,7 +70,8 @@
             <h1>Election Day is Tuesday, November 3, 2020!</h1>
             <h2>Are you registered to vote in your state?</h2>
             <p>In Texas, the deadline to register <br>(for both mail-in + in-person) is October 5, 2020.</p>
-            <p><a class="vote-link" target="_blank" href="https://www.nass.org/can-I-vote/voter-registration-status">Let me check</a></p>
+            <p><a class="vote-link" target="_blank" href="https://www.nass.org/can-I-vote/voter-registration-status">Let
+                    me check</a></p>
         </div>
     </div>
 </div>
