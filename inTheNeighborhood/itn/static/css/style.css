@@ -44,9 +44,10 @@ main{
 
 
 h1{
-    font-size: 5rem;
+    font-size: 4rem;
     text-shadow: rgb(201, 185, 66) 2px 2px 5px;
     width: 100%;
+    max-width: 80%;
     color: #FFD801;
     text-transform: uppercase;
     text-align: center;
@@ -66,16 +67,16 @@ footer{
 }
 
 .first-paragraph{
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     margin: 2rem;
     color: white;
     
 }
 
 .second-paragraph{
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin: 0 auto;
-    margin-top: 20rem;
+    margin-top: 10rem;
     color: white;
 }
 
