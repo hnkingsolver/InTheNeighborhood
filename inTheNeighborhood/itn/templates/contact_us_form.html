@@ -13,29 +13,31 @@
 
 <body>
     <header class="tc ph4">
-        <h1 class="f3 f2-m f1-l fw2 yellow mv3">
-            Contact Us!
+        <h1 class="f3 f2-m ttu f1-l fw2 yellow mv3">
+            Get in touch if you need a website
         </h1>
-        <h2 class="f5 f4-m f3-l fw2 white-80 mt0 lh-copy">
-            This is the subtitle where additional information can go if you really need it.
+        <h2 class="f5 f4-m f3-l fw2 white-90 mt0 lh-copy">
+            or if you have any additional resources. Constructive critism is always welcome. If you have any resources suggestions, message them to us.
         </h2>
     </header>
 
-    <form class="pa4 white pt4 tc">
+    <form action="/create-contact" method="POST" class="pa4 white pt4 tc">
+            {% csrf_token %}
         <div class="mt3">
             <label for="name" class="db fw4 lh-copy yellow f4">Name </label>
-            <input class="pa2 input-reset ba bg-white w-100 measure" type="text" aria-describedby="name-desc">
+            <input class="pa2 input-reset ba bg-white w-100 measure" name="name" type="text" aria-describedby="name-desc">
         </div>
         <div class="mt3">
             <label class="db fw4 lh-copy yellow f4" for="email-address">Email address</label>
-            <input class="pa2 input-reset ba bg-white w-100 measure" type="email" name="email-address">
+            <input class="pa2 input-reset ba bg-white w-100 measure" type="email" name="email">
         </div>
         <div class="mt3">
             <label for="comment" class="f4  db yellow mb2">Message</label>
             <textarea name="message" class=" border-box hover-black w-100 measure ba b--black-20 pa2 br2 mb2"
                 aria-describedby="comment-desc"></textarea>
         </div>
-        <a class="f4 link dim br2 ba ph3 pv2 mb2 dib bg-yellow black" href="#0">Submit</a>
+        <button type="submit" class="f4 link dim br2 ba ph3 pv2 mb2 dib bg-yellow black">Submit</button>
+        
     </form>
 
 

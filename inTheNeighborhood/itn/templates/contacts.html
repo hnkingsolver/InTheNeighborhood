@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Our current contacts</title>
+</head>
+
+<body>
+    {% for contact in contacts %}
+    <article class="pa3 pa5-ns bt bb b--black-10">
+        <h1 class="f3 yellow f2-m f1-l">{{contact.name}}</h1>
+        <h1 class="f5 white">By {{contact.email}}</h1>
+        <p class="f5"> {{contact.message}}</p>
+    </article>
+    {% endfor %}
+</body>
+
+</html>

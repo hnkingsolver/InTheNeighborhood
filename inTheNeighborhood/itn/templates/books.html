@@ -301,14 +301,6 @@
         <div class="fl w-50 pl4 tc">
             <section class="mw7 center avenir">
                 <h2 class="baskerville fw1 yellow ph3 ph0-l">Articles</h2>
-
-                <!-- dummy data.. can delete whenever you make model -->
-
-                <article class="pa3 pa5-ns bt bb b--black-10">
-                    <h1 class="f3 yellow f2-m f1-l">Telling the Truth About Race</h1>
-                    <h1 class="f5 white">By Don Taylor</h1>
-                    <a class="f6 fw6 db yellow link hover-red" href="https://donaldhtaylorjr.wordpress.com/2020/05/29/telling-the-truth-about-race/">READ HERE</a>
-                </article>
                 {% for article in articles %}
                 <article class="pa3 pa5-ns bt bb b--black-10">
                     <h1 class="f3 yellow f2-m f1-l">{{article.title}}</h1>
@@ -316,9 +308,6 @@
                     <a class="f6 fw6 db yellow link hover-red" href="{{ article.link }}">READ HERE</a>
                 </article>
                 {% endfor %}
-                <!-- end -->
-
-                <!-- you can change inputs here -->
         </div>
     </article>
 

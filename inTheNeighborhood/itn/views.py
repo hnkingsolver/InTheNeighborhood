@@ -1,9 +1,9 @@
 from django.shortcuts import render, HttpResponse, redirect
-from .models import Artist, Restaurant, BeautyBrand, Book, Article, Product, Service, FashionBrand
+from .models import Artist, Restaurant, BeautyBrand, Book, Article, Product, Service, FashionBrand, Contact
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
-#just to see server
+
 def index(request):
     return render(request, "index.html")
 
@@ -185,3 +185,26 @@ def create_service(request):
         
 def contact_us(request):
     return render(request, "contact_us_form.html")
+
+def create_contact(request):
+    if request.method == 'POST':
+        errors = Contact.objects.create_validator(request.POST)
+        if len(errors) > 0:
+            for key, value in errors.items():
+                messages.error(request, value)
+                return redirect('/contact-us')
+        else:
+            Contact.objects.create(
+                name = request.POST['name'],
+                email = request.POST['email'],
+                message = request.POST['message'],
+            )
+            return redirect('/resources')
+        
+        
+@login_required
+def contacts_page(request):
+    context = {
+        'contacts': Contact.objects.all()
+    }
+    return render(request, "contacts.html", context)
