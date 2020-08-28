@@ -5,15 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/contacts.css' %}" />
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css" />
     <title>Our current contacts</title>
 </head>
 
 <body>
     {% for contact in contacts %}
-    <article class="pa3 pa5-ns bt bb b--black-10">
-        <h1 class="f3 yellow f2-m f1-l">{{contact.name}}</h1>
-        <h1 class="f5 white">By {{contact.email}}</h1>
-        <p class="f5"> {{contact.message}}</p>
+    <article class="pa3 pa5-ns bt bb b--white-70">
+        <h1 class="f3 yellow f2-m f1-l">Name: {{contact.name}}</h1>
+        <h1 class="f4 white"> Email: {{contact.email}}</h1>
+        <p class="f5 white"> {{contact.message}}</p>
     </article>
     {% endfor %}
 </body>
