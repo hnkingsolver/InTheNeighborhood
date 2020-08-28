@@ -38,7 +38,7 @@ class ContactManager(models.Manager):
         errors = {}
         if len(requestPOST['name']) < 2:
             errors['name'] = "First name is too short."
-        if len(requestPOST['email']) < 8:
+        if len(requestPOST['email']) < 6:
             errors['email'] = "Email is too short"
         EMAIL_REGEX = re.compile(r'^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]+$')
         if len(requestPOST['email']) > 0:

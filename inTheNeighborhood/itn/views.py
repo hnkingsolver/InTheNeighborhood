@@ -190,6 +190,7 @@ def create_contact(request):
     if request.method == 'POST':
         errors = Contact.objects.create_validator(request.POST)
         if len(errors) > 0:
+            print("Errors", errors)
             for key, value in errors.items():
                 messages.error(request, value)
                 return redirect('/contact-us')

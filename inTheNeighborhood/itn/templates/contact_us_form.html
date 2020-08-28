@@ -21,6 +21,14 @@
         </h2>
     </header>
 
+    {% if messages %}
+    <ul style="list-style-type: none" class="red tc">
+        {% for message in messages %}
+        <p {% if message.tags %} class="{{ message.tags }} red" {% endif %}>{{ message }}</p>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
     <form action="/create-contact" method="POST" class="pa4 white pt4 tc">
             {% csrf_token %}
         <div class="mt3">

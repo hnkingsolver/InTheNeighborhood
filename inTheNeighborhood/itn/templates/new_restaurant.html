@@ -29,6 +29,15 @@
         <div class="row">
             <h1 class="yellow tc f1">Submit a Local Restaurant</h1>
         </div>
+
+        <!-- {% if messages %}
+        <ul style="list-style-type: none" class="red tc">
+            {% for message in messages %}
+            <p {% if message.tags %} class="pb4 red" {% endif %}>{{ message }}</p>
+            {% endfor %}
+        </ul>
+        {% endif %} -->
+
         <div class="row">
             <form action="/create-restaurant" method="POST" class="tc">
                 {% csrf_token %}
@@ -42,9 +51,9 @@
                 <div class="col">
                     <p class="pb4"><input type="text" name="name" required></p>
                     <p class="pb4"><input type="text" name="category" required></p>
-                    <p class="pb4"><textarea name="description"cols="30" rows="10"></textarea></p>
-                    <p class="pb4"><input type="url" name="photo"></p>
-                    <p class="pb4"><input type="url" name="link"></p>
+                    <p class="pb4"><textarea name="description"cols="30" rows="10" required></textarea></p>
+                    <p class="pb4"><input type="url" name="photo" required></p>
+                    <p class="pb4"><input type="url" name="link" required></p>
                     <p><button type="submit">Submit</button></p>
                 </div>
             </form>
