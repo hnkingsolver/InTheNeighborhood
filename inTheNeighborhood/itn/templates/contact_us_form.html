@@ -11,13 +11,30 @@
     <title>Contact</title>
 </head>
 
+<script src="https://use.fontawesome.com/fc14894b17.js"></script>
+
 <body>
+    <nav>
+        <a href="/"><img class="nav_logo" src="static/img/Logo_No_Text.png" alt="logo" /></a>
+        <div class="nav links">
+            <ul>
+                <li><a href="/about">About</a></li>
+                <li><a href="/resources">Resources</a></li>
+                <li class="contact"> <a class="f6 link dim br-pill ba ph3 pv2 mb2 dib black" href="/contact-us">Contact
+                        Us</a>
+            </ul>
+        </div>
+    </nav>
+    <div class="back_to_button w-100 w-60-ns pl3-ns avenir">
+            <a class="db pv4 ph3 ph0-l no-underline white dim" href="/"><i class="fa white fa-long-arrow-left"
+                    aria-hidden="true"></i> Back to home</a>
+        </div>
     <header class="tc ph4">
         <h1 class="f3 f2-m ttu f1-l fw2 yellow mv3">
             Let’s Talk About Your Website
         </h1>
         <h2 class="f5 f4-m f3-l fw2 white-90 mt0 lh-copy">
-                Need a website? Have resources to share? Want to help us out? We can't wait to hear from you.
+            Need a website? Have resources to share? Want to help us out? We can't wait to hear from you.
         </h2>
     </header>
 
@@ -30,10 +47,11 @@
     {% endif %}
 
     <form action="/create-contact" method="POST" class="pa4 white pt4 tc">
-            {% csrf_token %}
+        {% csrf_token %}
         <div class="mt3">
             <label for="name" class="db fw4 lh-copy yellow f4">Name </label>
-            <input class="pa2 input-reset ba bg-white w-100 measure" name="name" type="text" aria-describedby="name-desc">
+            <input class="pa2 input-reset ba bg-white w-100 measure" name="name" type="text"
+                aria-describedby="name-desc">
         </div>
         <div class="mt3">
             <label class="db fw4 lh-copy yellow f4" for="email-address">Email address</label>
@@ -45,7 +63,7 @@
                 aria-describedby="comment-desc"></textarea>
         </div>
         <button type="submit" class="f4 link dim br2 ba ph3 pv2 mb2 dib bg-yellow black">Submit</button>
-        
+
     </form>
 
 
