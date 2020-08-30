@@ -1,6 +1,5 @@
 // Get the modal
 var modal = document.getElementsByClassName('modal');
-
 // Get the button that opens the modal
 var btn = document.getElementsByClassName("myBtn");
 
@@ -68,16 +67,16 @@ span[5].onclick = function () {
 //         currentIndex = index;
 // } 
 
-// document.onclick = function (event) {
+// window.onclick = function (event) {
 
 //     if (event.target == modal[index]) {
 //         modal.style.display = "none";
 //     }
 // }
 
-document.onclick = function(event) {
-    if (event.target !== modal) {
+document.addEventListener("click", function(event) {
+    if (event.target == modal) {
         modal.style.display = "none";
     }
-}
+});
 

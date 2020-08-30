@@ -80,18 +80,10 @@ nav ul li{
     width: 4rem;
 }
 
-/* .pa1 {
-    padding: .25rem;
-}
-
-.pa4 {
-    padding: 2rem;
-} */
-
 .tc {
     text-align: center;
     display: inline-block;
-} */
+}
 
 footer h1 {
     color: white;
@@ -154,4 +146,11 @@ footer h1 {
     color: white;
     text-decoration: none;
     cursor: pointer;
+  }
+  .boom {
+      cursor: pointer;
+  }
+  .boom:hover {
+    background-color: rgb(255,216,1);
+    text-decoration: none;
   }
