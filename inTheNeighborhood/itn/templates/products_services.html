@@ -31,10 +31,12 @@
 
     <!-- products/services columns -->
     <article class="cf">
+
+        <!-- PRODUCTS -->
         <div class="fl w-50  tc">
             <h1 class="f1-l fw1 baskerville mt0 pb2 tc yellow ttu lh-title">Products</h1>
             {% for product in products %}
-            <a class="db center mw5 tc black link dim" href="{{ product.link }}">
+            <a class="db center mw5 tc black link pb4 dim" href="{{ product.link }}">
 
                 <img class="db ba b--black-10"/ alt="#" src="{{ product.photo }}">
 
@@ -46,11 +48,11 @@
             </a>
             {% endfor %}
         </div>
-
+        <!-- SERVICES -->
         <div class="fl w-50  tc">
             <h1 class="f1-l fw1 baskerville mt0 pb2 tc yellow ttu lh-title">Services</h1>
             {% for service in services %}
-            <a class="db center mw5 tc black link dim" href="{{ service.link }}">
+            <a class="db center mw5 tc black link pb4 dim" href="{{ service.link }}">
 
                 <img class="db ba b--black-10"/ alt="#" src="{{ service.photo }}">
 
