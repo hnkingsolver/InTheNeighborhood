@@ -28,3 +28,66 @@ nav ul li{
 .back_to_button {
     font-size: large;
 }
+
+.bg-modal {
+    background: rgba(0, 0, 0, 0.803);
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: auto !important;
+    z-index: 40;
+    display: none;
+}
+
+.modal-content {
+    width: 500px;
+    height: 300px;
+    background-color: #242424;
+    border-radius: 8px;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    box-shadow: 12px 12px rgb(255, 255, 255);
+}
+
+.modal-inner {
+    height: 260px;
+    margin-top: -20px;
+}
+
+.close {
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 14px;
+    font-size: 42px;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+.close:hover {
+    color: rgb(215, 0, 0);
+}
+
+.modal-inner p {
+    margin: 30px 0px;
+}
+
+.vote-link {
+    font: bold 24px Helvetica;
+    text-decoration: none;
+    background-color: rgb(255, 216, 1);
+    color: #000000;
+    padding: 6px 6px;
+    box-shadow: 2px 2px black;
+    border-radius: 8px;
+    margin: 20px auto;
+}
+
+.vote-link:hover {
+    background-color: white;
+}

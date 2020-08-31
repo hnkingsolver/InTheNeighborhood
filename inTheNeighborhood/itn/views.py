@@ -3,7 +3,6 @@ from .models import Artist, Restaurant, BeautyBrand, Book, Article, Product, Ser
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
-
 def index(request):
     return render(request, "index.html")
 
@@ -47,10 +46,6 @@ def products_services(request):
         'services': Service.objects.all()
     }
     return render(request, "products_services.html", context)
-
-
-
-
 
         
 def contact_us(request):

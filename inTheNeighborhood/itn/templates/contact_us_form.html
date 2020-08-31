@@ -62,12 +62,24 @@
             <textarea name="message" class=" border-box hover-black w-100 measure ba b--black-20 pa2 br2 mb2"
                 aria-describedby="comment-desc"></textarea>
         </div>
-        <button type="submit" class="f4 link dim br2 ba ph3 pv2 mb2 dib bg-yellow black">Submit</button>
+        <button type="submit" id="button" class="f4 link dim br2 ba ph3 pv2 mb2 dib bg-yellow black">Submit</button>
 
     </form>
-
-
-
 </body>
+
+<!-- Modal Section -->
+<div class="bg-modal">
+    <div class="modal-content">
+        <div class="close">+</div>
+        <div class="modal-inner">
+            <h1 class="yellow underline">Thank you for your message.</h1>
+            <h2 class="white">Someone from our team will be in touch shortly.</h2>
+            <p class="yellow"><a class="vote-link" href="/">Return home <i class="fa fa-long-arrow-right black" aria-hidden="true"></i></a></p>
+        </div>
+    </div>
+</div>
+
+<script src="https://use.fontawesome.com/fc14894b17.js"></script>
+<script src="{% static 'js/contact.js' %}"></script>
 
 </html>
