@@ -1,5 +1,5 @@
 from django.shortcuts import render, HttpResponse, redirect
-from .models import Artist, Restaurant, BeautyBrand, Book, Article, Product, Service, FashionBrand, Contact
+from .models import Artist, Restaurant, BeautyBrand, Book, Article, Product, Service, FashionBrand, Contact, Organization, Petition
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
@@ -47,7 +47,13 @@ def products_services(request):
     }
     return render(request, "products_services.html", context)
 
-        
+def donate(request):
+    context = {
+        'organizations': Organization.objects.all(),
+        'petitions': Petition.objects.all()
+    }
+    return render(request, "donate.html", context)
+  
 def contact_us(request):
     return render(request, "contact_us_form.html")
 

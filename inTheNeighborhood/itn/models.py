@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 import re
 
 class ResourceManager(models.Manager):
@@ -129,3 +130,15 @@ class Contact(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     objects = ContactManager()
+    
+class Organization(models.Model):
+    name = models.CharField(max_length=255)
+    link = models.CharField(max_length=255)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+class Petition(models.Model):
+    name = models.CharField(max_length=255)
+    link = models.CharField(max_length=255)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
