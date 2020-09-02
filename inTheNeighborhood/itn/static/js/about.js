@@ -74,7 +74,7 @@ span[5].onclick = function () {
 //     }
 // }
 
-document.addEventListener("click", function(event) {
+window.addEventListener("click", function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
