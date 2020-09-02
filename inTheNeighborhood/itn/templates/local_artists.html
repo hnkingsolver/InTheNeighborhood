@@ -14,69 +14,37 @@
 <script src="https://use.fontawesome.com/fc14894b17.js"></script>
 
 <body>
+    <nav>
+        <a href="/"><img class="nav_logo" src="static/img/Logo_No_Text.png" alt="logo" /></a>
+        <div class="nav links">
+            <ul>
+                <li><a href="/about">About</a></li>
+                <li><a href="/resources">Resources</a></li>
+                <li class="contact"> <a class="f6 link dim br-pill ba ph3 pv2 mb2 dib black" href="/contact-us">Contact
+                        Us</a>
+            </ul>
+        </div>
+    </nav>
     <div class="back_to_button w-100 w-60-ns pl3-ns avenir">
         <a class="db pv4 ph3 ph0-l no-underline white dim" href="/resources"><i class="fa white fa-long-arrow-left"
                 aria-hidden="true"></i> Back to resources</a>
     </div>
     <h1 class="f1-l fw1 baskerville mt0 tc yellow ttu lh-title">Dallas Local Artists</h1>
 
-    <!-- Abi Salami -->
-    <a class="db center mw5 tc black link dim" title="Abi Salami"
-        href="https://www.taunesbunny.com/shop">
-
-        <img class="db ba b--black-10"/ alt="Abi Salami painting"
-            src="https://assets.dmagstatic.com/wp-content/uploads/2020/06/Suffering-and-Smiling-24x30-in-acrylic-on-canvas.jpg">
-
-        <dl class="mt2 f6 lh-copy">
-            <dt class="clip white">Title</dt>
-            <dd class="ml0 white">Abi Salami</dd>
-            <dt class="clip">Artist</dt>
-            <dd class="ml0 gray">Painter</dd>
-        </dl>
-    </a>
-
-<!-- Jasmine Lewis -->
-    <a class="db center mw5 tc black link dim" title="Abi Salami"
-        href="https://goodgalco.bigcartel.com/">
-
-        <img class="db ba b--black-10"/ alt="Abi Salami painting"
-            src="https://assets.dmagstatic.com/wp-content/uploads/2020/06/IMG_7236-1200x796.jpg">
-
-        <dl class="mt2 f6 lh-copy">
-            <dt class="clip white">Title</dt>
-            <dd class="ml0 white">Jasmine Lewis</dd>
-            <dt class="clip">Artist</dt>
-            <dd class="ml0 gray">Fashion designer</dd>
-        </dl>
-    </a>
-
-    <!-- Jeremy Biggers -->
-    <a class="db center mw5 tc black link dim" title="Abi Salami"
-        href="https://jeremybiggers.com/">
-
-        <img class="db ba b--black-10"/ alt="Abi Salami painting"
-            src="https://assets.dmagstatic.com/wp-content/uploads/2020/06/DMagazineJeremyBiggers-1200x800.jpg">
-
-        <dl class="mt2 f6 lh-copy">
-            <dd class="ml0 white">Jeremy Biggers</dd>
-            <dt class="clip">Artist</dt>
-            <dd class="ml0 gray">Multimedia artist </dd>
-        </dl>
-    </a>
-
-    <!-- Charles Smith II -->
-    <a class="db center mw5 tc black link dim" title="Abi Salami"
-        href="https://www.smiththesecond.com/shop">
-
-        <img class="db ba b--black-10"/ alt="Abi Salami painting"
-            src="https://images1.dallasobserver.com/imager/u/original/11919890/090919_charlessmithii_kathytran_img_8474.jpg">
-
-        <dl class="mt2 f6 lh-copy">
-            <dd class="ml0 white">Charles Smith II</dd>
-            <dt class="clip">Artist</dt>
-            <dd class="ml0 gray">Fashion designer </dd>
-        </dl>
-    </a>
+    <section class="cf w-100 pa2-ns">
+        {% for artist in artists %}
+        <article class="fl w-100 w-50-m  w-25-ns pa2-ns">
+            <div class="aspect-ratio aspect-ratio--1x1">
+                <img style="background-image: url( {{artist.photo}} );"
+                    class="db bg-center cover aspect-ratio--object" />
+            </div>
+            <a href="{{ artist.link }}" class="ph2 ph0-ns pb3 link db">
+                <h3 class="f5 f4-ns tc mb0 yellow">{{ artist.name }}</h3>
+                <h3 class="f6 f5 tc fw4 mt2 white-60">{{ artist.category }}</h3>
+            </a>
+        </article>
+        {% endfor %}
+    </section>
 </body>
 
 </html>

@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:wght@300;400&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-    
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:wght@300;400&family=Roboto:wght@300;400;500&display=swap"
+        rel="stylesheet">
     <title>In the Neighborhood | Team of software developer helping small businesses build websites</title>
 </head>
 
@@ -16,54 +18,65 @@
         <a href="/"><img class="nav_logo" src="static/img/Logo_No_Text.png" alt="logo" /></a>
         <div class="nav links">
             <ul>
-                <li><a href="/about">About</a></li>
-                <li><a href="/resources">Resources</a></li>
-                <li class="contact">  <a href="#0">Contact Us</a></li>
+                <li class="f5 fw6 black link dim"><a href="/about">About</a></li>
+                <li class="f5 fw6 black link dim"><a href="/resources">Resources</a></li>
+                <li class="contact"> <a class="f6 link dim br-pill ba ph3 pv2 mb2 dib black" href="/contact-us">Contact
+                        Us</a>
+                </li>
             </ul>
         </div>
     </nav>
 
-    <main>
+    <article class="pa3 pa5-ns">
+        <h1 class="f3 f1-m yellow ttu tc f-headline-l">We're The Neighborhood Devs</h1>
+        <p class="f4 white tc lh-copy">
+            We make websites for Black-owned businesses in DFW for free. Why?
+        </p>
+        <p class="f4 white tc pt6 lh-copy">
+            Because we give a damn. Giving Black-owned businesses free websites helps them be more marketable, reach
+            more consumers, and, most important, visibility. Because they are in the neighborhood.
+        </p>
+    </article>
+    <!-- <main>
         <div id="first-main">
-            <h1>We're in the neighborhood</h1>
+            <h1>We’re the Neighborhood Devs</h1>
+           
 
             <div class="first-paragraph">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur molestias voluptas, in
-                    praesentium neque asperiores. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad
-                    reiciendis adipisci obcaecati. Tempora natus facilis eum porro illo?</p><br>
+                <p>We make websites for Black-owned businesses in DFW for free. Why? </p><br>
             </div>
         </div>
 
 
         <div id="second-main">
             <div class="second-paragraph">
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti debitis beatae, officia iusto
-                    ipsam quae laudantium dolore ut dolores quaerat ipsa qui libero. Beatae earum maxime esse, sequi
-                    asperiores quisquam? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa ab quas, tenetur
-                    iste illo iusto nam error, itaque sit adipisci odio earum maxime quasi dolor exercitationem
-                    necessitatibus molestias sequi quisquam.</p><br><br>
-
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque sequi a debitis error, obcaecati,
-                    quibusdam dicta culpa laudantium quisquam eius labore qui illo nulla sint ab similique delectus
-                    repellat accusamus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit facilis, at
-                    doloremque provident sapiente voluptatibus, quisquam dolore laboriosam consequuntur pariatur hic
-                    nostrum, aut perspiciatis libero et eum iure. Ullam, nulla?</p><br><br>
-
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum veniam soluta aperiam aliquam nisi
-                    possimus amet, Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse sint culpa in maxime
-                    alias tempoore architecto, possimus sunt impedit soluta libero ab odio cupiditate assumenda
-                    provident voluptates magni quibusdam beatae? Lorem ipsum dolor, sit amet consectetur adipisicing
-                    elit. Velit cum neque, nemo vero ex alias dolor incidunt hic voluptatibus sed dignissimos
-                    asperiores, placeat minima facere a maiores officia, aspernatur quia. dignissimos sit laborum quo at
-                    odit vel nam quis ratione quibusdam, labore corrupti totam.</p>
+                <p>Because we give a damn. Giving Black-owned businesses free websites helps them be more marketable, reach more consumers, and, most important, visibility. Because they are in the neighborhood.</p><br>
             </div>
         </div>
-    </main>
+    </main> -->
 
     <footer>
         <img src="static/img/logo4.png" alt="itn" style="height: 50px;">
     </footer>
-    
-    
+
+
 </body>
+
+<!-- Modal Section -->
+<div class="bg-modal">
+    <div class="modal-content">
+        <div class="close">+</div>
+        <div class="modal-inner">
+            <h1 class="yellow underline">Election Day is Tuesday, November 3, 2020!</h1>
+            <h2 class="white">Are you registered to vote in your state?</h2>
+            <p class="white">In Texas, the deadline to register <br>(for both mail-in + in-person) is October 5, 2020.</p>
+            <p class="yellow"><a class="vote-link" target="_blank" href="https://www.nass.org/can-I-vote/voter-registration-status">Let
+                    me check <i class="fa fa-long-arrow-right black" aria-hidden="true"></i></a></p>
+        </div>
+    </div>
+</div>
+
+<script src="https://use.fontawesome.com/fc14894b17.js"></script>
+<script src="{% static 'js/index.js' %}"></script>
+
 </html>

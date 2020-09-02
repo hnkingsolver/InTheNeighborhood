@@ -13,8 +13,18 @@
 
 <script src="https://use.fontawesome.com/fc14894b17.js"></script>
 
-
 <body>
+    <nav>
+        <a href="/"><img class="nav_logo" src="static/img/Logo_No_Text.png" alt="logo" /></a>
+        <div class="nav links">
+            <ul>
+                <li><a href="/about">About</a></li>
+                <li><a href="/resources">Resources</a></li>
+                <li class="contact"> <a class="f6 link dim br-pill ba ph3 pv2 mb2 dib black" href="/contact-us">Contact
+                        Us</a>
+            </ul>
+        </div>
+    </nav>
     <div class="back_to_button w-100 w-60-ns pl3-ns avenir">
         <a class="db pv4 ph3 ph0-l no-underline white dim" href="/resources"><i class="fa white fa-long-arrow-left"
                 aria-hidden="true"></i> Back to resources</a>
@@ -22,168 +32,54 @@
 
 
     <h1 class="f1-l fw1 baskerville mt0 pb5 tc yellow ttu lh-title">Beauty Brands</h1>
+    <div class="dt dt--fixed">
+        <!-- makeup -->
+        <div class="dtc tc pv4">
+            <h1 class="f2-l fw1 baskerville mt0 pb1 tc yellow ttu lh-title">Makeup</h1>
+            {% for brand in brands %}
+            {% if brand.category == 'Makeup' %}
+                <a class="db center mw5 pb5 tc black link dim" title="{{ brand.name }}" href="{{ brand.link }}">
 
+                    <img class="db ba b--black-10"/ alt="{{ brand.name }}" src="{{ brand.photo }}">
+            
+                    <dl class="mt2 f6 lh-copy">
+                        <dd class="ml0 yellow">{{ brand.name }}</dd>
+                    </dl>
+                </a>
+            {% endif %}
+            {% endfor %}
+        </div>
+        <!-- hair -->
+        <div class="dtc tc pv4">
+            <h1 class="f2-l fw1 baskerville mt0 pb1 tc yellow ttu lh-title">Hair</h1>
+            {% for brand in brands %}
+            {% if brand.category == 'Hair' %}
+                <a class="db center mw5 pb5 tc black link dim" title="{{ brand.name }}" href="{{ brand.link }}">
 
-    <h1 class="f2-l fw1 baskerville mt0 pb1 tc yellow ttu lh-title">Makeup</h1>
-    <!-- Mented Cosmetics -->
-    <a class="db center mw5 tc black pb3 link dim" title="Mented Cosmetics"
-        href="https://www.mentedcosmetics.com/">
-
-        <img class="db ba b--black-10"/ alt="Mented Cosmetics"
-            src="https://s1.r29static.com/bin/shop/90a/x,80/2002615/image.jpg">
-
-        <dl class="mt2 f6 lh-copy">
-            <dt class="clip white">Title</dt>
-            <dd class="ml0 yellow">Mented Cosmetics</dd>
-        </dl>
-    </a>
-
-<!-- The Lip Bar -->
-    <a class="db center mw5 tc black link pb3 dim" title="The Lip Bar"
-        href="https://thelipbar.com/">
-
-        <img class="db ba b--black-10"/ alt="The Lip Bar"
-            src="https://www.refinery29.com/images/9848755.jpg">
-
-        <dl class="mt2 f6 lh-copy">
-            <dt class="clip white">Title</dt>
-            <dd class="ml0 yellow">The Lip Bar</dd>
-        </dl>
-    </a>
-
-    <!-- Coloured Raine -->
-    <a class="db center mw5 pb3 tc black link dim" title="Coloured Raine"
-        href="https://colouredraine.com/">
-
-        <img class="db ba b--black-10"/ alt="Coloured Raine "
-            src="https://i.ebayimg.com/images/g/n7QAAOSwzitc5YwS/s-l400.jpg">
-
-        <dl class="mt2 f6 lh-copy">
-            <dd class="ml0 yellow">Coloured Raine</dd>
-        </dl>
-    </a>
-
-    <!-- Uoma Beauty -->
-    <a class="db center mw5 pb3 tc black link dim" title="Uoma Beauty"
-        href="https://uomabeauty.com/">
-
-        <img class="db ba b--black-10"/ alt="Uoma Beauty "
-            src="https://www.refinery29.com/images/9864068.jpg?format=webp&width=545&height=545&quality=85">
-
-        <dl class="mt2 f6 lh-copy">
-            <dd class="ml0 yellow">Uoma Beauty</dd>
-        </dl>
-    </a>
-
-    <!-- Juvia's Place -->
-    <a class="db center mw5 pb3 tc black link dim" title="Juvia's Place"
-        href="https://www.juviasplace.com/">
-
-        <img class="db ba b--black-10"/ alt="Juvia's Place "
-            src="https://s3.r29static.com/bin/shop/bd1/x,80/2036779/image.jpg">
-
-        <dl class="mt2 f6 lh-copy">
-            <dd class="ml0 yellow">Juvia's Place</dd>
-        </dl>
-    </a>
-
-    <!-- Beauty Bakerie -->
-    <a class="db center mw5 pb3 tc black link dim" title="Beauty Bakerie"
-        href="https://www.beautybakerie.com/">
-
-        <img class="db ba b--black-10"/ alt="Beauty Bakerie "
-            src="https://www.refinery29.com/images/9851871.jpg">
-
-        <dl class="mt2 f6 lh-copy">
-            <dd class="ml0 yellow">Beauty Bakerie</dd>
-        </dl>
-    </a>
-
-    <!-- Luna Magic Beauty -->
-    <a class="db center mw5 pb3 tc black link dim" title="Luna Magic Beauty"
-        href="https://lunamagic.com/">
-
-        <img class="db ba b--black-10"/ alt="Luna Magic Beauty "
-            src="https://www.refinery29.com/images/9804676.jpeg?format=webp&width=545&height=681&quality=85">
-
-        <dl class="mt2 f6 lh-copy">
-            <dd class="ml0 yellow">Luna Magic Beauty</dd>
-        </dl>
-    </a>
-
-    <!-- Danessa Myricks Beauty -->
-    <a class="db center mw5 pb3 tc black link dim" title="Danessa Myricks Beauty"
-        href="https://www.danessamyricksbeauty.com/">
-
-        <img class="db ba b--black-10"/ alt="Danessa Myricks Beauty "
-            src="https://www.refinery29.com/images/9867461.jpg">
-
-        <dl class="mt2 f6 lh-copy">
-            <dd class="ml0 yellow">Danessa Myricks Beauty</dd>
-        </dl>
-    </a>
-
-    <!-- Bossy Cosmetics-->
-    <a class="db center mw5 pb5 tc black link dim" title="Bossy Cosmetics"
-        href="https://bossybeauty.com/">
-
-        <img class="db ba b--black-10"/ alt="Bossy Cosmetics"
-            src="https://www.refinery29.com/images/9864341.jpg?format=webp&width=545&height=681&quality=85">
-
-        <dl class="mt2 f6 lh-copy">
-            <dd class="ml0 yellow">Bossy Cosmetics</dd>
-        </dl>
-    </a>
-
-    <h1 class="f2-l fw1 baskerville mt0 pb1 tc yellow ttu lh-title">Hair</h1>
-
-    <!-- Vernon François-->
-    <a class="db center mw5 pb5 tc black link dim" title="Vernon François"
-        href="https://www.vernonfrancois.com/">
-
-        <img class="db ba b--black-10"/ alt="Vernon François"
-            src="https://www.refinery29.com/images/9852211.jpg">
-
-        <dl class="mt2 f6 lh-copy">
-            <dd class="ml0 yellow">Vernon François</dd>
-        </dl>
-    </a>
-
-    <!-- Briogeo-->
-    <a class="db center mw5 pb5 tc black link dim" title="Briogeo"
-        href="https://briogeohair.com/">
-
-        <img class="db ba b--black-10"/ alt="Briogeo"
-            src="https://www.refinery29.com/images/9827208.jpg">
-
-        <dl class="mt2 f6 lh-copy">
-            <dd class="ml0 yellow">Briogeo</dd>
-        </dl>
-    </a>
-
-    <!-- Dr. Locs-->
-    <a class="db center mw5 pb5 tc black link dim" title="Dr. Locs"
-        href="https://drlocs.com/collections/shampoo/products/yasin-shampoo-16oz">
-
-        <img class="db ba b--black-10"/ alt="Dr. Locs"
-            src="https://i.pinimg.com/originals/86/e6/b9/86e6b915f5166ecf6b5bbadd00cb09a5.jpg">
-
-        <dl class="mt2 f6 lh-copy">
-            <dd class="ml0 yellow">Dr. Locs</dd>
-        </dl>
-    </a>
-
-    <!-- Mielle Organics-->
-    <a class="db center mw5 pb5 tc black link dim" title="Mielle Organics"
-        href="https://api.narrativ.com/api/v0/redirect/?url=https%3A%2F%2Fgo.redirectingat.com%2F%3Furl%3Dhttps%253A%252F%252Fwww.target.com%252Fp%252Fmielle-organics-pomegranate-honey-leave-in-conditioner-12-fl-oz%252F-%252FA-53217163%26id%3D30283X879131&a=1710009219861727553&uuid=4abaa41f-0b8c-41d4-95dc-2f47468a286d&uid_bam=1713562842172348545&ar=1715056060508559501">
-
-        <img class="db ba b--black-10"/ alt="Mielle Organics"
-            src="https://www.refinery29.com/images/9867456.jpeg">
-
-        <dl class="mt2 f6 lh-copy">
-            <dd class="ml0 yellow">Mielle Organics</dd>
-        </dl>
-    </a>
+                    <img class="db ba b--black-10"/ alt="{{ brand.name }}" src="{{ brand.photo }}">
+            
+                    <dl class="mt2 f6 lh-copy">
+                        <dd class="ml0 yellow">{{ brand.name }}</dd>
+                    </dl>
+                </a>
+            {% endif %}
+            {% endfor %}
+        </div>
+        <!-- skincare -->
+        <div class="dtc tc pv4">
+            <h1 class="f2-l fw1 baskerville mt0 pb1 tc yellow ttu lh-title">Skin Care</h1>
+            {% for brand in brands %}
+            {% if brand.category == 'Skin' %}
+                <a class="db center mw5 pb5 tc black link dim" title="{{ brand.name }}" href="{{ brand.link }}">
+                    <img class="db ba b--black-10"/ alt="{{ brand.name }}" src="{{ brand.photo }}">
+                    <dl class="mt2 f6 lh-copy">
+                        <dd class="ml0 yellow">{{ brand.name }}</dd>
+                    </dl>
+                </a>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
 </body>
 
 </html>

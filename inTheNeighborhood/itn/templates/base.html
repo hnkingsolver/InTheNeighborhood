@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:wght@300;400&family=Roboto:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <title>In the Neighborhood | Team of software developer helping small businesses build websites</title>
+</head>
+
+<body>
+    <nav>
+        <a href="/"><img class="nav_logo" src="static/img/Logo_No_Text.png" alt="logo" /></a>
+        <div class="nav links">
+            <ul>
+                <li class="f5 fw6 black link dim"><a href="/about">About</a></li>
+                <li class="f5 fw6 black link dim"><a href="/resources">Resources</a></li>
+                <li class="contact"> <a class="f6 link dim br-pill ba ph3 pv2 mb2 dib black" href="/contact-us">Contact
+                        Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    {% block content %}{% endblock content %}
+</body>
+
+<!-- Modal Section -->
+<div class="bg-modal">
+    <div class="modal-content">
+        <div class="close">+</div>
+        <div class="modal-inner">
+            <h1 class="yellow underline">Election Day is Tuesday, November 3, 2020!</h1>
+            <h2 class="white">Are you registered to vote in your state?</h2>
+            <p class="white">In Texas, the deadline to register <br>(for both mail-in + in-person) is October 5, 2020.</p>
+            <p class="yellow"><a class="vote-link" target="_blank" href="https://www.nass.org/can-I-vote/voter-registration-status">Let
+                    me check <i class="fa fa-long-arrow-right black" aria-hidden="true"></i></a></p>
+        </div>
+    </div>
+</div>
+
+<script src="https://use.fontawesome.com/fc14894b17.js"></script>
+<script src="{% static 'js/index.js' %}"></script>
+
+</html>
