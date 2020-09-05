@@ -13,6 +13,17 @@
 <script src="https://use.fontawesome.com/fc14894b17.js"></script>
 
 <body>
+    <nav>
+        <a href="/"><img class="nav_logo" src="static/img/Logo_No_Text.png" alt="logo" /></a>
+        <div class="nav links">
+            <ul>
+                <li><a href="/about">About</a></li>
+                <li><a href="/resources">Resources</a></li>
+                <li class="contact"> <a class="f6 link dim br-pill ba ph3 pv2 mb2 dib black" href="/contact-us">Contact
+                        Us</a>
+            </ul>
+        </div>
+    </nav>
     <div class="back_to_button w-100 w-60-ns pl3-ns avenir">
         <a class="db pv4 ph3 ph0-l no-underline white dim" href="/resources"><i class="fa white fa-long-arrow-left"
                 aria-hidden="true"></i> Back to resources</a>
@@ -20,13 +31,14 @@
 
     <!-- products/services columns -->
     <article class="cf">
-        <div class="fl w-50  tc">
-                <h1 class="f1-l fw1 baskerville mt0 pb2 tc yellow ttu lh-title">Products</h1>
-            {% for product in products %}
-            <a class="db center mw5 tc black link dim" href="{{ product.link }}">
 
-                <img class="db ba b--black-10"/ alt="#"
-                    src="{{ product.photo }}">
+        <!-- PRODUCTS -->
+        <div class="fl w-50  tc">
+            <h1 class="f1-l fw1 baskerville mt0 pb2 tc yellow ttu lh-title">Products</h1>
+            {% for product in products %}
+            <a class="db center mw5 tc black link pb4 dim" href="{{ product.link }}">
+
+                <img class="db ba b--black-10"/ alt="#" src="{{ product.photo }}">
 
                 <dl class="mt2 f6 lh-copy">
                     <dd class="ml0 white">{{ product.name }}</dd>
@@ -36,14 +48,13 @@
             </a>
             {% endfor %}
         </div>
-        
+        <!-- SERVICES -->
         <div class="fl w-50  tc">
-                <h1 class="f1-l fw1 baskerville mt0 pb2 tc yellow ttu lh-title">Services</h1>
+            <h1 class="f1-l fw1 baskerville mt0 pb2 tc yellow ttu lh-title">Services</h1>
             {% for service in services %}
-            <a class="db center mw5 tc black link dim"  href="{{ service.link }}">
+            <a class="db center mw5 tc black link pb4 dim" href="{{ service.link }}">
 
-                <img class="db ba b--black-10"/ alt="#"
-                    src="{{ service.photo }}">
+                <img class="db ba b--black-10"/ alt="#" src="{{ service.photo }}">
 
                 <dl class="mt2 f6 lh-copy">
                     <dd class="ml0 white">{{ service.name }}</dd>

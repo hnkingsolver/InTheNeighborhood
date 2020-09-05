@@ -1,4 +1,6 @@
 from django.db import models
+from django.utils import timezone
+import re
 
 class ResourceManager(models.Manager):
     def create_validator(self,requestPOST):
@@ -31,6 +33,20 @@ class ArticleManager(models.Manager):
         if len(existing_article) > 0 > 0:
             errors['duplicate_resource'] = "This article already exists in our database"
         return errors
+    
+class ContactManager(models.Manager):
+    def create_validator(self,requestPOST):
+        errors = {}
+        if len(requestPOST['name']) < 2:
+            errors['name'] = "First name is too short."
+        if len(requestPOST['email']) < 6:
+            errors['email'] = "Email is too short"
+        EMAIL_REGEX = re.compile(r'^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]+$')
+        if len(requestPOST['email']) > 0:
+            if not EMAIL_REGEX.match(requestPOST['email']):
+                errors['email_format'] = "Email is not in correct format"
+        return errors
+    
 
 class Artist(models.Model):
     name = models.CharField(max_length=100)
@@ -106,3 +122,23 @@ class FashionBrand(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     objects = ResourceManager()
+    
+class Contact(models.Model):
+    name = models.CharField(max_length=255)
+    email = models.CharField(max_length=255)
+    message = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    objects = ContactManager()
+    
+class Organization(models.Model):
+    name = models.CharField(max_length=255)
+    link = models.CharField(max_length=255)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+class Petition(models.Model):
+    name = models.CharField(max_length=255)
+    link = models.CharField(max_length=255)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)

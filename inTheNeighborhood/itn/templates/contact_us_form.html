@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}" />
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css" />
+    <title>Contact</title>
+</head>
+
+<script src="https://use.fontawesome.com/fc14894b17.js"></script>
+
+<body>
+    <nav>
+        <a href="/"><img class="nav_logo" src="static/img/Logo_No_Text.png" alt="logo" /></a>
+        <div class="nav links">
+            <ul>
+                <li><a href="/about">About</a></li>
+                <li><a href="/resources">Resources</a></li>
+                <li class="contact"> <a class="f6 link dim br-pill ba ph3 pv2 mb2 dib black" href="/contact-us">Contact
+                        Us</a>
+            </ul>
+        </div>
+    </nav>
+    <div class="back_to_button w-100 w-60-ns pl3-ns avenir">
+            <a class="db pv4 ph3 ph0-l no-underline white dim" href="/"><i class="fa white fa-long-arrow-left"
+                    aria-hidden="true"></i> Back to home</a>
+        </div>
+    <header class="tc ph4">
+        <h1 class="f3 f2-m ttu f1-l fw2 yellow mv3">
+            Let’s Talk About Your Website
+        </h1>
+        <h2 class="f5 f4-m f3-l fw2 white-90 mt0 lh-copy">
+            Need a website? Have resources to share? Want to help us out? We can't wait to hear from you.
+        </h2>
+    </header>
+
+    {% if messages %}
+    <ul style="list-style-type: none" class="red tc">
+        {% for message in messages %}
+        <p {% if message.tags %} class="{{ message.tags }} red" {% endif %}>{{ message }}</p>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+    <form action="/create-contact" method="POST" class="pa4 white pt4 tc">
+        {% csrf_token %}
+        <div class="mt3">
+            <label for="name" class="db fw4 lh-copy yellow f4">Name </label>
+            <input class="pa2 input-reset ba bg-white w-100 measure" name="name" type="text"
+                aria-describedby="name-desc">
+        </div>
+        <div class="mt3">
+            <label class="db fw4 lh-copy yellow f4" for="email-address">Email address</label>
+            <input class="pa2 input-reset ba bg-white w-100 measure" type="email" name="email">
+        </div>
+        <div class="mt3">
+            <label for="comment" class="f4  db yellow mb2">Message</label>
+            <textarea name="message" class=" border-box hover-black w-100 measure ba b--black-20 pa2 br2 mb2"
+                aria-describedby="comment-desc"></textarea>
+        </div>
+        <button type="submit" id="button" class="f4 link dim br2 ba ph3 pv2 mb2 dib bg-yellow black">Submit</button>
+
+    </form>
+</body>
+
+<!-- Modal Section -->
+<!-- <div class="bg-modal">
+    <div class="modal-content">
+        <div class="close">+</div>
+        <div class="modal-inner">
+            <h1 class="yellow underline">Thank you for your message.</h1>
+            <h2 class="white">Someone from our team will be in touch shortly.</h2>
+            <p class="yellow"><a class="vote-link" href="/">Return home <i class="fa fa-long-arrow-right black" aria-hidden="true"></i></a></p>
+        </div>
+    </div>
+</div>
+
+<script src="https://use.fontawesome.com/fc14894b17.js"></script>
+<script src="{% static 'js/contact.js' %}"></script> -->
+
+</html>
