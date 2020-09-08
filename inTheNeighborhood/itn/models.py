@@ -38,7 +38,7 @@ class ContactManager(models.Manager):
     def create_validator(self,requestPOST):
         errors = {}
         if len(requestPOST['name']) < 2:
-            errors['name'] = "First name is too short."
+            errors['name'] = "Name is too short."
         if len(requestPOST['email']) < 6:
             errors['email'] = "Email is too short"
         EMAIL_REGEX = re.compile(r'^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]+$')

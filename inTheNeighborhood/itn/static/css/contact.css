@@ -91,3 +91,15 @@ nav ul li{
 .vote-link:hover {
     background-color: white;
 }
+
+#lab_social_icon_footer {
+    background-color: rgb(255, 216, 1);
+  }
+  
+  #lab_social_icon_footer a {
+    color: #333;
+  }
+  
+  #lab_social_icon_footer #social-em:hover {
+    color: #ffffff;
+  }
