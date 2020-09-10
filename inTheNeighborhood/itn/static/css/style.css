@@ -7,29 +7,6 @@ body {
   background-color: #171717;
 }
 
-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.3rem 5rem;
-  background-color: white;
-  color: #171717;
-  text-decoration: none;
-}
-
-nav ul li {
-  margin: 10px;
-  list-style-type: none;
-  display: inline-flex;
-  align-items: flex-end;
-}
-
-.nav_logo {
-  width: 6%;
-  min-width: 3rem;
-  padding: 0.5rem;
-}
-
 h1 {
   font-family: "roboto";
 }
