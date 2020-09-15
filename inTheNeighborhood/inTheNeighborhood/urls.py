@@ -21,4 +21,4 @@ urlpatterns = [
     path('', include('itn.urls')),
 ]
 
-handler404 = 'itn.views.error_404_view'
+handler404 = 'itn.views.handler404'
