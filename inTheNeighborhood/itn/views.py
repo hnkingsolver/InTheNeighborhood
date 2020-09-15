@@ -3,6 +3,7 @@ from .models import Artist, Restaurant, BeautyBrand, Book, Article, Product, Ser
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
+
 def error_404_view(request, exception):
     return render(request, "404.html")
 
