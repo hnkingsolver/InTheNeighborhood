@@ -20,3 +20,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('itn.urls')),
 ]
+
+handler404 = 'itn.views.error_404_view'
