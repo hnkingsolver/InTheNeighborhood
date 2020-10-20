@@ -2,29 +2,6 @@ body {
     background-color: #171717;
 }
 
-nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.3rem 5rem;
-    background-color: white;
-    color: #171717;
-    text-decoration: none;    
-}
-
-nav ul li{
-    margin: 10px;
-    list-style-type: none;
-    display: inline-flex;
-    align-items: flex-end;
-}
-
-.nav_logo{
-    width: 6%; 
-    min-width: 3rem;
-    padding: .5rem;
-}
-
 .back_to_button {
     font-size: large;
 }
@@ -91,3 +68,15 @@ nav ul li{
 .vote-link:hover {
     background-color: white;
 }
+
+#lab_social_icon_footer {
+    background-color: rgb(255, 216, 1);
+  }
+  
+  #lab_social_icon_footer a {
+    color: #333;
+  }
+  
+  #lab_social_icon_footer #social-em:hover {
+    color: #ffffff;
+  }

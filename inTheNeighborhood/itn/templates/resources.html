@@ -5,21 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% load static %}
-    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"/>
     <link rel="stylesheet" href="{% static 'css/resources.css' %}" />
     <title>Resources</title>
 </head>
 
 <body>
-    <nav>
-        <a href="/"><img class="nav_logo" src="static/img/Logo_No_Text.png" alt="logo" /></a>
-        <div class="nav links">
-            <ul>
-                <li class="f5 fw6  dark-red link dim"><a href="/about">About</a></li>
-                <li class="f5 fw6  dark-red link dim"><a href="/resources">Resources</a></li>
-                <li class="contact"> <a class="f6 link dim br-pill ba ph3 pv2 mb2 dib black" href="/contact-us">Contact Us</a>
-                </li>
-            </ul>
+    <nav class="dt w-100 bg-white border-box pa3 ph5-ns">
+        <a class="dtc v-mid mid-gray link dim w-25" href="/" title="Home">
+            <img src="static/img/Neighborhood-Developers-logos_black.png" class="dib w3 h3 br-100" alt="Site Name">
+        </a>
+        <div class="dtc v-mid w-75 tr">
+            <a class="link dim dark-gray f6 f5-ns dib mr3 mr4-ns" href="/about" title="About">About</a>
+            <a class="link dim dark-gray f6 f5-ns dib mr3 mr4-ns" href="/resources" title="Store">Resources</a>
+            <a class="link dim dark-gray f6 f5-ns dib" href="/contact-us" title="Contact">Contact</a>
         </div>
     </nav>
     <article class="system-sans-serif">
@@ -118,7 +117,7 @@
     </header>
 
     <footer class="tc ">
-        <img class="w-20-ns nav_logo" src="../static/img/logo4.png" alt="logo" />
+        <img class="w-20-ns nav_logo" src="../static/img/end-logo.png" alt="logo" />
     </footer>
 
 </body>

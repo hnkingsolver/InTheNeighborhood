@@ -15,21 +15,17 @@
 <script src="https://use.fontawesome.com/fc14894b17.js"></script>
 
 <body>
-    <!-- nav -->
-    <nav>
-        <a href="/"><img class="nav_logo" src="static/img/Logo_No_Text.png" alt="logo" /></a>
-        <div class="nav links">
-            <ul>
-                <li><a href="/about">About</a></li>
-                <li><a href="/resources">Resources</a></li>
-                <li class="contact"> <a class="f6 link dim br-pill ba ph3 pv2 mb2 dib black" href="/contact-us">Contact
-                        Us</a>
-            </ul>
+
+    <nav class="dt w-100 bg-white border-box pa3 ph5-ns">
+        <a class="dtc v-mid mid-gray link dim w-25" href="/" title="Home">
+            <img src="static/img/Neighborhood-Developers-logos_black.png" class="dib w3 h3 br-100" alt="Site Name">
+        </a>
+        <div class="dtc v-mid w-75 tr">
+            <a class="link dim dark-gray f6 f5-ns dib mr3 mr4-ns" href="/about" title="About">About</a>
+            <a class="link dim dark-gray f6 f5-ns dib mr3 mr4-ns" href="/resources" title="Store">Resources</a>
+            <a class="link dim dark-gray f6 f5-ns dib" href="/contact-us" title="Contact">Contact</a>
         </div>
     </nav>
-
-    <img src="https://blacklivesmatter.com/wp-content/uploads/2020/06/blmgn-sm-blm-twitter-profile-1500x500-01.jpg"
-        class="" alt="blm">
 
     <article class="cf">
         <div class="fl w-50 bg-near-white tc">
@@ -73,7 +69,7 @@
     </article>
 
 
-    <footer class="fl tc">
+    <section class="fl tc">
         <div class="mb1">
             <h1 class="f3 yellow mv0 pv2 ph3">MEET OUR TEAM</h1>
             <i class="fa fa-2x mt3 fa-long-arrow-down white tc" aria-hidden="true"></i>
@@ -99,6 +95,27 @@
             </div>
         </div>
         <div class="tc pa3 pa4-m pa5-l">
+                <img src="https://media-exp1.licdn.com/dms/image/C5603AQHg04fwre2ojg/profile-displayphoto-shrink_400_400/0?e=1603929600&v=beta&t=whXcnjZnr3t1DCLGjndmR75eUpfpM_xt34k2tR0Kn-M"
+                    class="br-100 pa1 ba b--black-10 h4 w4 myBtn boom" alt="avatar">
+    
+                <!-- Paul Modal -->
+                <div class="modal">
+    
+                    <!-- Paul Modal content -->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <span class="close">×</span>
+                            <h2 class="f3 yellow">Paul Ukaegbu</h2>
+                        </div>
+                        <div class="modal-body">
+                            <p>Full-stack Web Developer</p>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+
+        <div class="tc pa3 pa4-m pa5-l">
             <img src="https://media-exp1.licdn.com/dms/image/C4E03AQHVXz6BpzIglw/profile-displayphoto-shrink_400_400/0?e=1603929600&v=beta&t=ztKSo1_Hmt3O13dsuAiP4ZIRUa962FrykWh3cS5qs-E"
                 class="br-100 pa1 ba b--black-10 h4 w4 myBtn boom" alt="avatar">
 
@@ -118,28 +135,9 @@
 
             </div>
         </div>
+        
         <div class="tc pa3 pa4-m pa5-l">
-            <img src="https://media-exp1.licdn.com/dms/image/C5603AQHg04fwre2ojg/profile-displayphoto-shrink_400_400/0?e=1603929600&v=beta&t=whXcnjZnr3t1DCLGjndmR75eUpfpM_xt34k2tR0Kn-M"
-                class="br-100 pa1 ba b--black-10 h4 w4 myBtn boom" alt="avatar">
-
-            <!-- Paul Modal -->
-            <div class="modal">
-
-                <!-- Paul Modal content -->
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <span class="close">×</span>
-                        <h2 class="f3 yellow">Paul Ukaegbu</h2>
-                    </div>
-                    <div class="modal-body">
-                        <p>Full-stack Web Developer</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-        <div class="tc pa3 pa4-m pa5-l">
-            <img src="https://media-exp1.licdn.com/dms/image/C4E03AQEl0ecugmwnqg/profile-displayphoto-shrink_400_400/0?e=1603929600&v=beta&t=fZybOWl-9go5Qg5yJ4HPWujTGmsuv6K5lhzg2uPZBlU"
+            <img src="https://media-exp1.licdn.com/dms/image/C5603AQFqc_P6WHQ7kg/profile-displayphoto-shrink_800_800/0?e=1605744000&v=beta&t=aAkqofsKMezt8efbLogOUTwsTgy5Q9Eg4GT41Jfx7IU"
                 class="br-100 pa1 ba b--black-10 h4 w4 myBtn boom" alt="avatar">
 
             <!-- Isaiah Modal -->
@@ -177,8 +175,7 @@
             </div>
         </div>
         <div class="tc pa3 pa4-m pa5-l">
-            <img src="static/img/michelle.png"
-                class="br-100 pa1 ba b--black-10 h4 w4 myBtn boom" alt="avatar">
+            <img src="static/img/michelle.png" class="br-100 pa1 ba b--black-10 h4 w4 myBtn boom" alt="avatar">
 
             <!-- Michelle Han Modal -->
             <div class="modal">
@@ -214,8 +211,7 @@
                 </div>
             </div>
         </div>
-    </footer>
-
+    </section>
 
     <script src="{% static 'js/about.js' %}"></script>
 </body>

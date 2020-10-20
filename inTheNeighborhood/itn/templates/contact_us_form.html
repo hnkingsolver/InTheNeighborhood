@@ -14,21 +14,22 @@
 <script src="https://use.fontawesome.com/fc14894b17.js"></script>
 
 <body>
-    <nav>
-        <a href="/"><img class="nav_logo" src="static/img/Logo_No_Text.png" alt="logo" /></a>
-        <div class="nav links">
-            <ul>
-                <li><a href="/about">About</a></li>
-                <li><a href="/resources">Resources</a></li>
-                <li class="contact"> <a class="f6 link dim br-pill ba ph3 pv2 mb2 dib black" href="/contact-us">Contact
-                        Us</a>
-            </ul>
+    <!-- NAV -->
+    <nav class="dt w-100 bg-white border-box pa3 ph5-ns">
+        <a class="dtc v-mid mid-gray link dim w-25" href="/" title="Home">
+            <img src="static/img/Neighborhood-Developers-logos_black.png" class="dib w3 h3 br-100" alt="Site Name">
+        </a>
+        <div class="dtc v-mid w-75 tr">
+            <a class="link dim dark-gray f6 f5-ns dib mr3 mr4-ns" href="/about" title="About">About</a>
+            <a class="link dim dark-gray f6 f5-ns dib mr3 mr4-ns" href="/resources" title="Store">Resources</a>
+            <a class="link dim dark-gray f6 f5-ns dib" href="/contact-us" title="Contact">Contact</a>
         </div>
     </nav>
     <div class="back_to_button w-100 w-60-ns pl3-ns avenir">
-            <a class="db pv4 ph3 ph0-l no-underline white dim" href="/"><i class="fa white fa-long-arrow-left"
-                    aria-hidden="true"></i> Back to home</a>
-        </div>
+        <a class="db pv4 ph3 ph0-l no-underline white dim" href="/"><i class="fa white fa-long-arrow-left"
+                aria-hidden="true"></i> Back to home</a>
+    </div>
+    <!-- HEADER -->
     <header class="tc ph4">
         <h1 class="f3 f2-m ttu f1-l fw2 yellow mv3">
             Let’s Talk About Your Website
@@ -37,7 +38,7 @@
             Need a website? Have resources to share? Want to help us out? We can't wait to hear from you.
         </h2>
     </header>
-
+    <!-- ERROR MESSAGES -->
     {% if messages %}
     <ul style="list-style-type: none" class="red tc">
         {% for message in messages %}
@@ -45,7 +46,7 @@
         {% endfor %}
     </ul>
     {% endif %}
-
+    <!-- FORM -->
     <form action="/create-contact" method="POST" class="pa4 white pt4 tc">
         {% csrf_token %}
         <div class="mt3">
@@ -65,7 +66,26 @@
         <button type="submit" id="button" class="f4 link dim br2 ba ph3 pv2 mb2 dib bg-yellow black">Submit</button>
 
     </form>
+
+    <!-- FOOTER -->
+    <section class="tc pa2" id="lab_social_icon_footer">
+        <h1 class="f3 mb2">Or reach out below</h1>
+        <h2 class="f5 fw4 gray mt0">We respond best through email, but ensure we will get back to you on all platforms.
+        </h2>
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+        <div class="container">
+            <div class="text-center center-block">
+                <a href="mailto:contact@neighborhooddevs.com"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="tc ">
+        <img class="w-20-ns nav_logo" src="../static/img/end-logo.png" alt="logo" />
+    </footer>
+
 </body>
+
 
 <!-- Modal Section -->
 <!-- <div class="bg-modal">
